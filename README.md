@@ -2,7 +2,7 @@
 
 # *Work in Progress*
 
-![Image of Current Configuration](https://raw.githubuse.lapdots/misc/images/dumpster-fire.png)
+![Image of Current Configuration](https://raw.githubusercontent.com/ohmyhub/.lapdots/main/misc/images/dumptser-fire.png)
 
 </div>
 
