@@ -1,22 +1,37 @@
+<div align="center">
+
+# *Work in Progress*
+
+![Image of Current Configuration](https://raw.githubuse.lapdots/misc/images/dumpster-fire.png)
+
+</div>
+
 # Who put all these dots in my files?
 
 Hello and welcome to this repository of configuration files. You may find
 something useful here, or at least be amused by my hamfisted system
-configuration. It's hard make something elegant and efficient when your hands
+configuration. It's hard to make something elegant and efficient when your hands
 are made out of greasy hams.
 
+## Table of Contents
+- [System information](#system-information)
+- [Attribution](#attribution)
+- [Desktop Environment](#desktop-environment)
+    - [Sway Window Manager](#sway-window-manager)
+    - [Waybar](#waybar)
+    - [Colorschemes](#colorschemes)
 
 ## System Information
 
--   Machine - Lenovo ThinkPad Yoga 260
--   Kernel - 5.16.3-arch1-1
--   Distro - Arch Linux
--   Window Manager - Sway (Wayland)
--   Terminal - kitty
--   Shell - fish
+-   **Machine** — *Lenovo ThinkPad Yoga 260*
+-   **Kernel** — *5.16.3-arch1-1*
+-   **Distro** — *Arch Linux*
+-   **Window Manager** — *Sway (Wayland)*
+-   **Terminal** — *kitty*
+-   **Shell** — *fish*
 
 
-## `Attribution`
+## Attribution
 
 -   Most of what you will find here has been lifted from the dotfiles of others.
     I wish I'd kept better track of all the people I've pilfered from. A list
@@ -29,7 +44,7 @@ are made out of greasy hams.
 
 ## Desktop Environment
 
-### Sway Tiling Window Manager
+### Sway Window Manager
 -   I wanted to setup an environment that relied on the Wayland display server
     protocol as much as possible. There are a few things I use that still rely
     on XWayland but I don't want to track those down and list them here.
@@ -52,7 +67,7 @@ are made out of greasy hams.
   statusbar, similar to the MS Windows taskbar, for Sway and other wlroots based
   compositors.
 
-### Colorscheme
+### Colorschemes
 - There is no single unified colorscheme that I use for everything. However, the
   main colorscheme is tokyo-night and I try to use colorschemes that work well
   with that.
