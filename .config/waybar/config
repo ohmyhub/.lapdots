@@ -1,0 +1,97 @@
+{
+  "position": "top",
+  "height": 42,
+  "modules-left": [
+    "custom/menu",
+    "sway/workspaces"
+  ],
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "battery",
+    "custom/date",
+    "clock",
+    "tray",
+    "custom/power"
+  ],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": ""
+    }
+  },
+  "custom/date": {
+    "format": " {}",
+    "interval": 3600,
+    "exec": "/home/kevin/.local/bin/waybar-date.sh"
+  },
+  "custom/menu": {
+    "format": " ",
+    "on-click": "swaymsg exec \\$menu",
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+  "clock": {
+    "format": " {:%I:%M %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 5
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-full": "  {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": " Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " Muted",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  }
+}
