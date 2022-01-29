@@ -1,6 +1,6 @@
 \.git
-#LICENSE
+\LICENSE
 ^/.*\.org
 ^/.*\.md
 \misc
-.gitignore
+\.gitignore
