@@ -1,0 +1,14 @@
+* Who put all these dots in my files?
+
+Hello and welcome to this repository of configuration files. You may find
+something useful here, or at least be amused by my hamfisted system
+configuration. It's hard make something elegant and efficient when your hands
+are made out of greasy hams.
+
+** System Information
++ Machine - Lenovo ThinkPad Yoga 260
++ Kernel - 5.16.3-arch1-1
++ Distro - Arch Linux
++ Window Manager - Sway (Wayland)
++ Terminal - kitty
++ Shell - fish
