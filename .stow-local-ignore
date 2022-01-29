@@ -3,3 +3,4 @@
 ^/.*\.org
 ^/.*\.md
 \misc
+.gitignore
