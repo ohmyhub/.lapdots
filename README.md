@@ -6,7 +6,7 @@
 
 </div>
 
-# Who put all these dots in my files?
+# Who put all these ⏺'s in my files?
 
 Hello and welcome to this repository of configuration files. You may find
 something useful here, or at least be amused by my hamfisted system
@@ -14,14 +14,19 @@ configuration. It's hard to make something elegant and efficient when your hands
 are made out of greasy hams.
 
 ## Table of Contents
-- [System information](#system-information)
-- [Attribution](#attribution)
-- [Desktop Environment](#desktop-environment)
-    - [Sway Window Manager](#sway-window-manager)
-    - [Waybar](#waybar)
-    - [Colorschemes](#colorschemes)
+-   [System information](#system-information)
+-   [Attribution](#attribution)
+-   [Desktop Environment](#desktop-environment)
+    -   [Sway Window Manager](#sway-window-manager)
+    -   [Waybar](#waybar)
+    -   [Colorschemes](#colorschemes)
+-   [Box of Loose Configuration](#box-of-loose-configuration)
+    -   [Ranger File Manager](#ranger-file-manager)
+    -   [Mako Notification Daemon](#mako-notification-daemon)
+    -   [Tridactyl Firefox Extension](#tridactyl-firefox-extension)
+    -   [Zathura Document Viewer](#zathura-document-viewer)
 
-## System Information
+## system Information
 
 -   **Machine** — *Lenovo ThinkPad Yoga 260*
 -   **Kernel** — *5.16.3-arch1-1*
@@ -63,11 +68,33 @@ are made out of greasy hams.
     detailed customization.
 
 ### Waybar
-- This is what I use instead of the default swaybar. Waybar is a customizable
-  statusbar, similar to the MS Windows taskbar, for Sway and other wlroots based
-  compositors.
+-   This is what I use instead of the default swaybar. Waybar is a customizable
+    statusbar, similar to the MS Windows taskbar, for Sway and other wlroots
+    based compositors.
 
 ### Colorschemes
-- There is no single unified colorscheme that I use for everything. However, the
-  main colorscheme is tokyo-night and I try to use colorschemes that work well
-  with that.
+-   There is no single unified colorscheme that I use for everything. However,
+    the main colorscheme is tokyo-night and I try to use colorschemes that work
+    well with that.
+
+## Box of Loose Configuration
+-   I don't feel like categorizing these at the moment.
+
+### Ranger File Manager
+-   A powerful terminal file manager. It is designed for keyboard navigation and
+    has keybinds that are familiar to vim users. One of it's most well known
+    features is file previews. You can preview most files. Your code previews
+    can have syntax highlighting. You can preview images and have image previews
+    for video files. You can show a full preview of a pdf file. It's excellent.
+
+### Mako Notification Daemon
+-   This little guy is what I use to get desktop notifications. It's great
+    because without it I wouldn't have Discord notifications popping up to
+    remind me I need to disable Discord desktop notifications.
+    
+### Tridactyl Firefox Extension
+-  Vim-like keyboard navigation? In my internet browser!? Yes.
+
+### Zathura Document Viewer
+-  Minimal document viewer with vim-like keyboard navigation. I'm starting to
+   see a pattern.
