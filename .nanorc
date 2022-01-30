@@ -5,11 +5,17 @@ include "/usr/share/nano/extra/*.nanorc"
 # Enable soft line wrapping
 set softwrap
 
-# Enable smooth scrolling
-set smooth
+# Wrap lines at blank characters
+set atblanks
+
+# Use auto-indentation
+set autoindent
 
 # Sidebar for indicating current position
 set indicator
+
+# Display cursor position in statusbar
+set constantshow
 
 # Enable mouse support
 set mouse
