@@ -1,1 +1,22 @@
-include /usr/share/nano/*.nanorc
+# add syntax highlighting
+include "/usr/share/nano/*.nanorc"
+include "/usr/share/nano/extra/*.nanorc"
+
+# Enable soft line wrapping
+set softwrap
+
+# Enable smooth scrolling
+set smooth
+
+# Sidebar for indicating current position
+set indicator
+
+# Enable mouse support
+set mouse
+
+# Change the title color
+set titlecolor black,yellow
+set numbercolor cyan
+set keycolor brightcyan
+set functioncolor brightgreen
+set statuscolor black,yellow
