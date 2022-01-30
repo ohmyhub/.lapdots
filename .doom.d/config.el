@@ -7,7 +7,7 @@
 ;; choose your fonts!
 (setq doom-font (font-spec :family "Bespoke Iosevka Mono" :size 24 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Overpass Nerd Font" :size 21 :weight 'medium)
-      doom-unicode-font (font-spec :family "Noto Color Emoji" :weight 'regular)
+      doom-unicode-font (font-spec :family "Noto Color Emoji")
       doom-serif-font (font-spec :family "BlexMono Nerd Font" :weight 'light))
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -15,6 +15,8 @@
 (custom-set-faces!
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
+
+(setq org-fontify-quote-and-verse-blocks t)
 
 ;; we snazzy
 (setq doom-theme 'doom-snazzy)
