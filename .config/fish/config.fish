@@ -7,6 +7,8 @@ if status is-interactive
     set -gx npm_config_prefix /home/kevin/.local
     set -gx XDG_CURRENT_DESKTOP sway
     set -gx QT_QPA_PLATFORM wayland
+    set -gx LIBVA_DRIVER_NAME iHD
+    set -gx VDPAU_DRIVER va_gl
 
     # TokyoNight Color Palette
     set -l foreground c0caf5
