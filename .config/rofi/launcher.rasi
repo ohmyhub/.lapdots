@@ -93,7 +93,7 @@ element-text {
     expand:                         true;
     background-color:               transparent;
     text-color:                     @fg;
-    highlight:                      @fuz;
+    highlight:                      bold underline #ffd700FF;
     horizontal-align:               0;
     vertical-align:                 0.5;
     margin:                         0px 2.5px 0px 2.5px;
