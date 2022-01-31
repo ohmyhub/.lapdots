@@ -19,7 +19,8 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu wofi --hide-scroll | xargs swaymsg exec --
-set $menu fuzzel --prompt="  " --font='Bespoke Iosevka Mono:pixelsize=20' --no-icons --width=35 --horizontal-pad=5 --terminal=kitty --inner-pad=5 --background-color=24283bff --text-color=c0caf5ff --selection-color=414868ff --match-color=e0af68ff --border-color=414868ff | xargs swaymsg exec --
+#set $menu fuzzel --prompt="  " --font='Bespoke Iosevka Mono:pixelsize=20' --no-icons --width=35 --horizontal-pad=5 --terminal=kitty --inner-pad=5 --background-color=24283bff --text-color=c0caf5ff --selection-color=414868ff --match-color=e0af68ff --border-color=414868ff | xargs swaymsg exec --
+set $menu rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/launcher.rasi | xargs swaymsg exec --
 
 ### Output configuration
 #
