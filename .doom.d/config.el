@@ -14,7 +14,8 @@
         doom-themes-enable-italic t))
 (custom-set-faces!
   '(font-lock-comment-face :slant italic)
-  '(font-lock-keyword-face :slant italic))
+  '(font-lock-keyword-face :slant italic)
+  '(org-verse :slant italic))
 
 (setq org-fontify-quote-and-verse-blocks t)
 
