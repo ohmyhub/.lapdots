@@ -1,8 +1,8 @@
 configuration {
-	font:							"JetBrainsMono Nerd Font 16";
+	font:							"JetBrainsMono Nerd Font 14";
     show-icons:                     false;
 	icon-theme: 					"Adwaita";
-    display-drun: 					"🔍";
+    display-drun: 					" ";
     drun-display-format:            "{name}";
     disable-history:                false;
 	sidebar-mode: 					false;
@@ -14,9 +14,9 @@ window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	border:							1px 3px 5px 1px;
+	border:							2px 2px 2px 2px;
 	border-color:					@ac;
-    border-radius:                  2px;
+    border-radius:                  10px;
 	width:							600px;
     location:                       center;
     x-offset:                       0;
@@ -28,7 +28,7 @@ prompt {
 	padding: 						2px 0px 0px 4px;
 	background-color: 				@al;
 	text-color: 					@fg;
-	font:							"monospace 14";
+	font:							"JetBrainsMono Nerd Font 14";
 }
 
 entry {
@@ -93,6 +93,7 @@ element-text {
     expand:                         true;
     background-color:               transparent;
     text-color:                     @fg;
+    highlight:                      @fuz;
     horizontal-align:               0;
     vertical-align:                 0.5;
     margin:                         0px 2.5px 0px 2.5px;
