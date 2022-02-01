@@ -49,7 +49,7 @@ client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
 
 ### Idle configuration
  exec swayidle -w \
-          timeout 600 'swaylock -f' \
+          timeout 1200 'swaylock -f' \
           timeout 1200 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f'
 
