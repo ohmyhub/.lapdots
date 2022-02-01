@@ -29,7 +29,7 @@ are made out of greasy hams.
 ## system Information
 
 -   **Machine** — *Lenovo ThinkPad Yoga 260*
--   **Kernel** — *5.16.3-arch1-1*
+-   **Kernel** — *5.16.4-arch1-1*
 -   **Distro** — *Arch Linux*
 -   **Window Manager** — *Sway (Wayland)*
 -   **Terminal** — *kitty*
