@@ -107,7 +107,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
     # Monitor brightness
-    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym XF86MonBrightnessDown exec brightnessctl set -5%
     bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 #
 # Moving around:
