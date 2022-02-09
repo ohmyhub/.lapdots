@@ -13,7 +13,7 @@
 # pacman
 #
 
-location="$HOME/.config"
+location="$HOME/.lapdots/pkg-lists"
 
 pacman -Qett | grep -v "$(pacman -Qem)" > $location/pkgs-pacman.txt
 pacman -Qqm > $location/pkgs-aur.txt
