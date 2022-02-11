@@ -6,6 +6,7 @@
     "sway/workspaces"
   ],
   "modules-right": [
+    "custom/notification",
     "network",
     "pulseaudio",
     "battery",
@@ -44,7 +45,7 @@
     "tooltip": false
   },
   "clock": {
-    "format": " {:%I:%M %p}",
+    "format": "{:%I:%M %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
@@ -57,11 +58,11 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}  {capacity}%",
+    "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
-    "format-full": "  {capacity}%",
+    "format-full": " {capacity}%",
     "format-icons": [
       "",
       "",
@@ -71,7 +72,7 @@
     ]
   },
   "network": {
-    "format-wifi": "  {essid}",
+    "format-wifi": " {essid}",
     "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": " Disconnected",
@@ -92,6 +93,22 @@
         "",
         ""
       ]
-    }
+      }
+  },
+  "custom/notification": {
+  "tooltip": false,
+  "format": "{icon}",
+  "format-icons": {
+    "notification": "<span foreground='red'><sup></sup></span>",
+    "none": "",
+    "dnd-notification": "<span foreground='red'><sup></sup></span>",
+    "dnd-none": ""
+  },
+  "return-type": "json",
+  "exec-if": "which swaync-client",
+  "exec": "swaync-client -swb",
+  "on-click": "swaync-client -t -sw",
+  "on-click-right": "swaync-client -d -sw",
+  "escape": true
   }
 }
