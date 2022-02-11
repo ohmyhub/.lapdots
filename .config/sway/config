@@ -234,6 +234,9 @@ bindsym $mod+o exec killall -SIGUSR1 waybar
 bindsym $mod+y exec kitty --class 'launcher' bash -c 'compgen -c | sort -u | fzf --reverse --prompt='» ' --pointer='➤' | xargs -r swaymsg -t command exec'
 for_window [app_id="^launcher$"] floating enable, border pixel 1, resize set width 30 ppt height 40 ppt, move position 675 px 200 px
 
+# Toggle control center
+bindsym $mod+Shift+n exec swaync-client -t -sw
+
 #
 # Status Bar:
 #
