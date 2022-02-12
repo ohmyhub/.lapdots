@@ -12,8 +12,10 @@ flashfocus-git
 fsearch
 google-chrome-dev
 inxi
+kickoff
 libgccjit
 macchina
+mullvad-vpn
 neovim-nightly-bin
 nerd-fonts-complete
 nerdfetch
@@ -36,6 +38,7 @@ sway-git
 sway-git-debug
 swaybg-git
 swaylock-effects-git
+swaync-git
 sworkstyle
 tllist-git
 tlpui
