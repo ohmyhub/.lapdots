@@ -307,3 +307,8 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 ;; rust language config
 (after! rustic
   (setq rustic-lsp-server 'rls))
+
+;; Stop trying to format my shitty C code
+(setq +format-on-save-enabled-modes
+      '(not c-mode
+            make-mode))
