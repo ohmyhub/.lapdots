@@ -9,6 +9,7 @@ if status is-interactive
     set -gx QT_QPA_PLATFORM wayland
     set -gx LIBVA_DRIVER_NAME iHD
     set -gx VDPAU_DRIVER va_gl
+    set -gx MANPAGER "fish --command 'col --no-backspaces --spaces | bat --language man --plain'" # use bat to colourise man
 
     # TokyoNight Color Palette
     set -l foreground c0caf5
