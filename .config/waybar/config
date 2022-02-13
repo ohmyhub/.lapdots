@@ -88,12 +88,9 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-      }
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
   },
   "custom/notification": {
   "tooltip": false,
