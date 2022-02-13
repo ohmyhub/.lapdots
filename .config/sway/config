@@ -170,9 +170,9 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    #bindsym $mod+s layout stacking
+    #bindsym $mod+w layout tabbed
+    #bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -236,6 +236,9 @@ for_window [app_id="^launcher$"] floating enable, border pixel 1, resize set wid
 
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
+
+# launch ranger
+bindsym $mod+e exec $term -e ranger
 
 #
 # Status Bar:
