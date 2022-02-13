@@ -240,6 +240,9 @@ bindsym $mod+Shift+n exec swaync-client -t -sw
 # launch ranger
 bindsym $mod+e exec $term -e ranger
 
+# rofi clipboard history
+bindsym $mod+c exec rofi-clip
+
 #
 # Status Bar:
 #
