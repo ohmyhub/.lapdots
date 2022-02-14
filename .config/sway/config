@@ -15,6 +15,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
+set $term_float kitty --config /home/kevin/.config/kitty/htop_kitty.conf --class floating_shell
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -242,6 +243,9 @@ bindsym $mod+e exec $term -e ranger
 
 # rofi clipboard history
 bindsym $mod+c exec rofi-clip
+
+# floating htop
+bindsym $mod+Shift+i exec "kitty --config /home/kevin/.config/kitty/htop_kitty.conf --class floating_shell htop"
 
 #
 # Status Bar:
