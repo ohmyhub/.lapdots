@@ -14,6 +14,10 @@
            :repo "tecosaur/org-pandoc-import"
            :files ("*.el" "filters" "preprocessors")))
 
+(package! elfeed-dashboard
+  :recipe (:host github
+           :repo "Manoj321/elfeed-dashboard"))
+
 ;; colorize color names in the buffer
 (package! rainbow-mode)
 

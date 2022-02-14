@@ -312,3 +312,9 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (setq +format-on-save-enabled-modes
       '(not c-mode
             make-mode))
+
+;; Feed me
+(after! elfeed
+  (setq elfeed-search-filter "@2-month-ago +unread"))
+
+(setq elfeed-dashboard-file "~/Dropbox/Org/elfeed-dashboard.org")
