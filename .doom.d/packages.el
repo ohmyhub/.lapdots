@@ -34,7 +34,9 @@
 (package! logview)
 
 ;; editing mode for tridactylrc
-(package! tridactyl-mode)
+(package! tridactyl-mode
+  :recipe (:host github
+           :repo "https://github.com/Fuco1/tridactyl-mode"))
 
 ;; don't allow native compilation
 (package! with-editor :recipe (:build (:not native-compile)))
