@@ -46,7 +46,7 @@ window#waybar {
     padding-right: 5px;
 }
 
-#custom-date, #clock, #battery, #pulseaudio, #network, #tray {
+#custom-date, #clock, #battery, #pulseaudio, #network, #tray, #idle_inhibitor {
     background-color: #24283b;
     padding: 5px 10px;
     margin: 5px 0px;
@@ -108,4 +108,12 @@ window#waybar {
     margin: 5px 0px;
     color: #bb9af7;
     border-radius: 5px 0px 0px 5px;
+}
+
+#idle_inhibitor.activated {
+    color: green;
+}
+
+#idle_inhibitor.deactivated {
+    color: white;
 }
