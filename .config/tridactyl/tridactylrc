@@ -9,8 +9,8 @@ sanitize tridactyllocal tridactylsync
 " Firefox homepage, but Tridactyl doesn't support this yet.
 set newtab about:blank
 
-" Use vim in tmux for editor.
-set editorcmd nano
+" Use neovim for editor.
+set editorcmd nvim
 
 " Ctrl-F should use the browser's native 'find' functionality.
 unbind <C-f>
@@ -20,13 +20,18 @@ bind / fillcmdline find
 bind ? fillcmdline find -?
 bind n findnext 1
 bind N findnext -1
+
 " Remove search highlighting.
 bind ,<Space> nohlsearch
+
 " Use sensitive case. Smart case would be nice here, but it doesn't work.
 set findcase sensitive
 
 " Smooth scrolling, yes please. This is still a bit janky in Tridactyl.
 set smoothscroll true
+
+" hide normal mode indicator
+set modeindicatormodes {"normal":"false","insert":"true","input":"true","ignore":"true","ex":"true","hint":"true","visual":"true"}
 
 " The default jump of 10 is a bit much.
 bind j scrollline 5
@@ -49,3 +54,6 @@ autocmd DocStart roll20.net mode ignore
 
 " Set the colorscheme
 colorscheme midnight
+
+" Defaults to 300ms but I want to be more faster
+set hintdelay 100
