@@ -23,7 +23,7 @@
 (setq doom-theme 'doom-snazzy)
 
 ;; fancy splash screen image
-(setq fancy-splash-image "~/Pictures/Vmacs-logo.png")
+(setq fancy-splash-image "~/Pictures/unicorn-unbridled.png")
 
 ;; where the org at?
 (setq org-directory "~/Dropbox/Org/")
