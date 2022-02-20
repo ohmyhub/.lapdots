@@ -130,17 +130,9 @@ c.tabs.padding = {"bottom": 5, "left": 5, "right": 5, "top": 5}
 # Type: Perc
 c.zoom.default = "133%"
 
-# Render all web contents using a dark theme. Example configurations
-# from Chromium's `chrome://flags`:  - "With simple HSL/CIELAB/RGB-based
-# inversion": Set   `colors.webpage.darkmode.algorithm` accordingly.  -
-# "With selective image inversion": Set
-# `colors.webpage.darkmode.policy.images` to `smart`.  - "With selective
-# inversion of non-image elements": Set
-# `colors.webpage.darkmode.threshold.text` to 150 and
-# `colors.webpage.darkmode.threshold.background` to 205.  - "With
-# selective inversion of everything": Combines the two variants   above.
+# Render all web contents using a dark theme.
 # Type: Bool
-c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.enabled = False
 
 # Default font families to use. Whenever "default_family" is used in a
 # font setting, it's replaced with the fonts listed here. If set to an
@@ -169,7 +161,7 @@ c.url.searchengines = {"DEFAULT": "https://www.google.com/search?q={}"}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = ["https://www.reddit.com/r/all/"]
+c.url.start_pages = ["https://kagi.com/"]
 
 # keybindings
 config.bind("J", "tab-prev")
