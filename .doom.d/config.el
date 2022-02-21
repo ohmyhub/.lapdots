@@ -357,3 +357,11 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
         name)
        )))
   )
+
+;; config for org-media-note
+(use-package! org-media-note
+  :hook (org-mode .  org-media-note-mode)
+  :bind (
+         ("C-M-s-v" . org-media-note-hydra/body))  ;; Main entrance
+  :config
+  (setq org-media-note-screenshot-image-dir "~/Pictures/"))  ;; Folder to save screenshot
