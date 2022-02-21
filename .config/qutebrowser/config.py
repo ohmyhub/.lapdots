@@ -187,7 +187,7 @@ config.bind("k", "scroll-px 0 -50")
 config.bind(",M", "hint links spawn --detach umpv --force-window yes {hint-url}")
 
 # hackerman download youtube videos with yt-dlp
-config.bind(",y", "hint links spawn yt-get")
+config.bind(",y", "hint links spawn -u yt-get {hint-url}")
 
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova
