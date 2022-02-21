@@ -251,6 +251,9 @@ bindsym $mod+c exec rofi-clip
 # floating htop
 bindsym $mod+Shift+i exec "kitty --config /home/kevin/.config/kitty/htop_kitty.conf --class floating_shell htop"
 
+# quick edit configs
+bindsym $mod+q exec confmanager
+
 #
 # Status Bar:
 #
