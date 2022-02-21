@@ -126,6 +126,8 @@ c.scrolling.smooth = False
 # Type: Padding
 c.tabs.padding = {"bottom": 5, "left": 5, "right": 5, "top": 5}
 
+c.statusbar.padding = {"bottom": 5, "left": 5, "right": 5, "top": 5}
+
 # Default zoom level.
 # Type: Perc
 c.zoom.default = "133%"
@@ -145,10 +147,10 @@ c.fonts.default_family = ["DejaVu Sans"]
 # either a float value with a "pt" suffix, or an integer value with a
 # "px" suffix.
 # Type: String
-c.fonts.default_size = "15pt"
+c.fonts.default_size = "16pt"
 
 # My eyes aint so good
-c.fonts.web.size.minimum = 15
+c.fonts.web.size.minimum = 16
 
 # I want hints to be uppercase characters
 c.hints.uppercase = True
@@ -163,6 +165,18 @@ c.url.searchengines = {"DEFAULT": "https://www.google.com/search?q={}"}
 # Type: List of FuzzyUrl, or FuzzyUrl
 c.url.start_pages = ["https://kagi.com/"]
 
+# Always restore open sites when qutebrowser is reopened.
+# Type: Bool
+c.auto_save.session = True
+
+# Load a restored tab as soon as it takes focus
+c.session.lazy_restore = True
+
+# general
+c.content.default_encoding = "utf-8"
+c.content.javascript.can_access_clipboard = True
+c.tabs.last_close = "close"
+
 # keybindings
 config.bind("J", "tab-prev")
 config.bind("K", "tab-next")
@@ -171,11 +185,6 @@ config.bind("k", "scroll-px 0 -50")
 
 # open youtube videos in mpv using the umpv script
 config.bind(",M", "hint links spawn --detach umpv --force-window yes {hint-url}")
-
-# general
-c.content.default_encoding = "utf-8"
-c.content.javascript.can_access_clipboard = True
-c.tabs.last_close = "close"
 
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova
