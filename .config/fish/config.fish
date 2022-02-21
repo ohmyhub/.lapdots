@@ -43,6 +43,9 @@ if status is-interactive
     # misc
     set -gx MANPAGER "fish --command 'col --no-backspaces --spaces | bat --language man --plain'" # use bat to colourise man
 
+    # Trying to map the right alt key to Hyper
+    set -gx DEVNODE /dev/input/by-path/platform-i8042-serio-0-event-kbd
+
     # TokyoNight Color Palette
     set -l foreground c0caf5
     set -l selection 33467C
