@@ -38,6 +38,15 @@
   :recipe (:host github
            :repo "Fuco1/tridactyl-mode"))
 
+;; control mpv from within emacs
+(package! mpv)
+
+;; pretty hydras
+(package! pretty-hydra)
+
+;; taking notes on my media
+(package! org-media-note :recipe (:host github :repo "yuchen-lea/org-media-note"))
+
 ;; don't allow native compilation
 (package! with-editor :recipe (:build (:not native-compile)))
 (package! vterm :recipe (:build (:not native-compile)))
