@@ -365,3 +365,11 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
          ("C-M-s-v" . org-media-note-hydra/body))  ;; Main entrance
   :config
   (setq org-media-note-screenshot-image-dir "~/Pictures/"))  ;; Folder to save screenshot
+
+;; vertico but posframey
+(require 'vertico-posframe)
+(vertico-posframe-mode 1)
+
+(setq vertico-posframe-parameters
+      '((left-fringe . 8)
+        (right-fringe . 8)))

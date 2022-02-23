@@ -47,6 +47,8 @@
 ;; taking notes on my media
 (package! org-media-note :recipe (:host github :repo "yuchen-lea/org-media-note"))
 
+(package! vertico-posframe)
+
 ;; don't allow native compilation
 (package! with-editor :recipe (:build (:not native-compile)))
 (package! vterm :recipe (:build (:not native-compile)))
