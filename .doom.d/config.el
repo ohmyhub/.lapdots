@@ -5,8 +5,8 @@
       user-mail-address "k.warden.89@gmail.com")
 
 ;; choose your fonts!
-(setq doom-font (font-spec :family "Bespoke Iosevka Mono" :size 24 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "Overpass Nerd Font" :size 21 :weight 'medium)
+(setq doom-font (font-spec :family "Bespoke Iosevka Mono" :size 22 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "Overpass Nerd Font" :size 20 :weight 'medium)
       doom-unicode-font (font-spec :family "Noto Color Emoji")
       doom-serif-font (font-spec :family "BlexMono Nerd Font" :weight 'light))
 (after! doom-themes
