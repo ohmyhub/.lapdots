@@ -25,6 +25,9 @@
 ;; fancy splash screen image
 (setq fancy-splash-image "~/Pictures/unicorn-unbridled.png")
 
+;; simplify the startup screen
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+
 ;; where the org at?
 (setq org-directory "~/Dropbox/Org/")
 
