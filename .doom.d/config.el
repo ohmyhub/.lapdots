@@ -32,7 +32,7 @@
 (setq org-directory "~/Dropbox/Org/")
 
 ;; where ever I may roam
-(setq org-roam-directory "~/Dropbox/Roam/"
+(setq org-roam-directory "~/Dropbox/Roam/")
 (setq org-roam-dailies-directory "journal/")
 
 ;; I don't care about line numbers
