@@ -28,6 +28,9 @@
 ;; where the org at?
 (setq org-directory "~/Dropbox/Org/")
 
+;; where ever I may roam
+(setq org-roam-directory "~/Dropbox/Roam/")
+
 ;; I don't care about line numbers
 (setq display-line-numbers-type nil)
 
