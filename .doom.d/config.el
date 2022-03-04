@@ -23,7 +23,7 @@
 (setq doom-theme 'doom-snazzy)
 
 ;; fancy splash screen image
-(setq fancy-splash-image "~/Pictures/unicorn-unbridled.png")
+(setq fancy-splash-image "~/Pictures/unbridled-unicorn.png")
 
 ;; simplify the startup screen
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
@@ -32,7 +32,8 @@
 (setq org-directory "~/Dropbox/Org/")
 
 ;; where ever I may roam
-(setq org-roam-directory "~/Dropbox/Roam/")
+(setq org-roam-directory "~/Dropbox/Roam/"
+(setq org-roam-dailies-directory "journal/")
 
 ;; I don't care about line numbers
 (setq display-line-numbers-type nil)
@@ -305,6 +306,14 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
         ("\\.x?html?\\'" . default)
         ("\\.pdf\\'" . default)
         ("\\.epub\\'" . "foliate %s")))
+
+;; when in roam
+(after! org-roam
+  (setq org-roam-capture-templates
+        ;; Use human readable dates for dailies titles
+        org-roam-dailies-capture-templates
+        '(("d" "default" entry "* %?"
+           :target (file+head "%<%Y-%m-%d>.org" "#+title: %<%B %d, %Y>\n\n")))))
 
 ;; I can see colors
 (add-hook! org-mode 'rainbow-mode)
