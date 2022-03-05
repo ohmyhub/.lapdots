@@ -33,7 +33,13 @@
 
 ;; where ever I may roam
 (setq org-roam-directory "~/Dropbox/Roam/")
-(setq org-roam-dailies-directory "journal/")
+(setq org-roam-dailies-directory "daily/")
+
+(setq org-roam-dailies-capture-templates
+      '(("d" "default" entry
+         "* %?"
+         :target (file+head "%<%Y-%m-%d>.org"
+                            "#+title: %<%Y-%m-%d>\n"))))
 
 ;; I don't care about line numbers
 (setq display-line-numbers-type nil)
@@ -306,14 +312,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
         ("\\.x?html?\\'" . default)
         ("\\.pdf\\'" . default)
         ("\\.epub\\'" . "foliate %s")))
-
-;; when in roam
-(after! org-roam
-  (setq org-roam-capture-templates
-        ;; Use human readable dates for dailies titles
-        org-roam-dailies-capture-templates
-        '(("d" "default" entry "* %?"
-           :target (file+head "%<%Y-%m-%d>.org" "#+title: %<%B %d, %Y>\n\n")))))
 
 ;; I can see colors
 (add-hook! org-mode 'rainbow-mode)
