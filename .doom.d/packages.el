@@ -47,7 +47,13 @@
 ;; taking notes on my media
 (package! org-media-note :recipe (:host github :repo "yuchen-lea/org-media-note"))
 
+;; vertico in a childframe
 (package! vertico-posframe)
+
+;; firefox talking to org-mode
+(package! spookfox
+  :recipe (:host github
+           :repo "bitspook/spookfox"))
 
 ;; don't allow native compilation
 (package! with-editor :recipe (:build (:not native-compile)))
