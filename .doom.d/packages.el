@@ -50,11 +50,6 @@
 ;; vertico in a childframe
 (package! vertico-posframe)
 
-;; firefox talking to org-mode
-(package! spookfox
-  :recipe (:host github
-           :repo "bitspook/spookfox"))
-
 ;; don't allow native compilation
 (package! with-editor :recipe (:build (:not native-compile)))
 (package! vterm :recipe (:build (:not native-compile)))

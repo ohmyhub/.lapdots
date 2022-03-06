@@ -386,6 +386,3 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (setq vertico-posframe-parameters
       '((left-fringe . 8)
         (right-fringe . 8)))
-
-;; configure spookfox
-(setq spookfox-saved-tabs-target `(file+headline ,(expand-file-name "spookfox.org" org-directory) "Tabs"))
