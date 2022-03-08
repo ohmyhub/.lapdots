@@ -31,6 +31,9 @@ if status is-interactive
     # node
     set -gx npm_config_prefix /home/kevin/.local
 
+    # golang
+    set -gx GOPATH /home/kevin/.local/lib/go
+
     # iGPU
     set -gx LIBVA_DRIVER_NAME iHD
     set -gx VDPAU_DRIVER va_gl
