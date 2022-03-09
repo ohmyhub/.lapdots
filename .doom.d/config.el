@@ -386,3 +386,8 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (setq vertico-posframe-parameters
       '((left-fringe . 8)
         (right-fringe . 8)))
+
+;; playing with org-volume
+(setq org-volume-image-download-method nil)
+
+(setq org-download-image-dir "~/Dropbox/Org/linked-images/")

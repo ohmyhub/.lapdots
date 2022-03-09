@@ -47,6 +47,9 @@
 ;; taking notes on my media
 (package! org-media-note :recipe (:host github :repo "yuchen-lea/org-media-note"))
 
+;; I read a book once
+(package! org-volume :recipe (:host github :repo "akirak/org-volume"))
+
 ;; vertico in a childframe
 (package! vertico-posframe)
 
