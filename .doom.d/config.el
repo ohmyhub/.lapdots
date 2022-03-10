@@ -390,4 +390,9 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 ;; playing with org-volume
 (setq org-volume-image-download-method nil)
 
+;; save images to default org image directory
 (setq org-download-image-dir "~/Dropbox/Org/linked-images/")
+
+;; let's get spooky… and foxy
+(setq spookfox-saved-tabs-target '(file+headline (expand-file-name "spookfox.org" org-directory)))
+(setq spookfox-native-installation-dir "~/.local/bin/")
