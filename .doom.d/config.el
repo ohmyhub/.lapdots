@@ -5,8 +5,8 @@
       user-mail-address "k.warden.89@gmail.com")
 
 ;; choose your fonts!
-(setq doom-font (font-spec :family "Bespoke Iosevka Mono" :size 22 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "Overpass Nerd Font" :size 20 :weight 'medium)
+(setq doom-font (font-spec :family "Bespoke Iosevka Mono" :size 24 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "Overpass Nerd Font" :size 22 :weight 'medium)
       doom-unicode-font (font-spec :family "Noto Color Emoji")
       doom-serif-font (font-spec :family "BlexMono Nerd Font" :weight 'light))
 (after! doom-themes
@@ -260,6 +260,89 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (custom-set-faces!
   '(org-document-title :height 1.5))
 
+;; org candy
+(after! org
+  (appendq! +ligatures-extra-symbols
+            `(:checkbox      "☐"
+              :pending       "■"
+              :checkedbox    "☑"
+              :list_property "∷"
+              :em_dash       "—"
+              :ellipses      "…"
+              :arrow_right   "→"
+              :arrow_left    "←"
+              :title         ""
+              :subtitle      "ʈ"
+              :author        ""
+              :date          ""
+              :property      ""
+              :options       "⌥"
+              :startup       "⏻"
+              :macro         "μ"
+              :html_head     ""
+              :html          ""
+              :latex_class   ""
+              :latex_header  ""
+              :beamer_header "β"
+              :latex         ""
+              :attr_latex    ""
+              :attr_html     ""
+              :attr_org      "🦄"
+              :begin_quote   "❝"
+              :end_quote     "❞"
+              :caption       "☰"
+              :header        "›"
+              :results       ""
+              :begin_export  ""
+              :end_export    ""
+              :properties    ""
+              :drawer        "▬"
+              :end           "∎"
+              :log           "⬓"
+              :email         ""
+              :logbook       ""))
+  (set-ligatures! 'org-mode
+    :merge t
+    :checkbox      "[ ]"
+    :pending       "[-]"
+    :checkedbox    "[X]"
+    :list_property "::"
+    :em_dash       "---"
+    :ellipsis      "..."
+    :arrow_right   "->"
+    :arrow_left    "<-"
+    :title         "#+title:"
+    :subtitle      "#+subtitle:"
+    :author        "#+author:"
+    :date          "#+date:"
+    :property      "#+property:"
+    :options       "#+options:"
+    :startup       "#+startup:"
+    :macro         "#+macro:"
+    :html_head     "#+html_head:"
+    :html          "#+html:"
+    :latex_class   "#+latex_class:"
+    :latex_header  "#+latex_header:"
+    :beamer_header "#+beamer_header:"
+    :latex         "#+latex:"
+    :attr_latex    "#+attr_latex:"
+    :attr_html     "#+attr_html:"
+    :attr_org      "#+attr_org:"
+    :begin_quote   "#+begin_quote"
+    :end_quote     "#+end_quote"
+    :caption       "#+caption:"
+    :header        "#+header:"
+    :begin_export  "#+begin_export"
+    :end_export    "#+end_export"
+    :results       "#+RESULTS:"
+    :property      ":properties:"
+    :end           ":end:"
+    :drawer        ":drawer:"
+    :log           ":log:"
+    :email         "#+email:"
+    :logbook       ":logbook:")
+  (plist-put +ligatures-extra-symbols :name "⁍"))
+
 ;; so pretty
 (add-hook 'org-mode-hook #'+org-pretty-mode)
 
@@ -337,15 +420,18 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 
 ;; config for org-media-note
 (use-package! org-media-note
-  :hook (org-mode .  org-media-note-mode)
+  :hook (org-mode . org-media-note-mode)
   :bind (
          ("C-M-s-v" . org-media-note-hydra/body))  ;; Main entrance
   :config
   (setq org-media-note-screenshot-image-dir "~/Pictures/"))  ;; Folder to save screenshot
 
 ;; vertico but posframey
-(require 'vertico-posframe)
-(vertico-posframe-mode 1)
+(after! doom-modeline
+  (vertico-posframe-mode 1)
+  (setq vertico-posframe-border-width 5)
+  (custom-set-faces!
+    '(vertico-posframe-border :inherit default :background "#2F3140")))
 
 (setq vertico-posframe-parameters
       '((left-fringe . 8)
@@ -360,3 +446,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 ;; let's get spooky… and foxy
 (setq spookfox-saved-tabs-target '(file+headline "~/Dropbox/Org/spookfox.org" "Open Tabs"))
 (setq spookfox-native-installation-dir "~/.local/bin/")
+
+;; count your pixels
+(setq display-pixels-per-inch 176.0)
