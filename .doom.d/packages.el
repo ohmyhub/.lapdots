@@ -59,6 +59,9 @@
 ;; talk lispy to me firefox
 (package! spookfox :recipe (:host github :repo "bitspook/spookfox"))
 
+;; I want to see time
+(package! org-timeline)
+
 ;; don't allow native compilation
 (package! with-editor :recipe (:build (:not native-compile)))
 (package! vterm :recipe (:build (:not native-compile)))
