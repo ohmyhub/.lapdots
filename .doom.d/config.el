@@ -394,5 +394,8 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (setq org-download-image-dir "~/Dropbox/Org/linked-images/")
 
 ;; let's get spooky… and foxy
-(setq spookfox-saved-tabs-target '(file+headline (expand-file-name "spookfox.org" org-directory)))
+(setq spookfox-saved-tabs-target '(file+headline "~/Dropbox/Org/spookfox.org" "Open Tabs"))
 (setq spookfox-native-installation-dir "~/.local/bin/")
+
+;; text is for suckers
+(add-hook 'org-agenda-finalize-hook 'org-timeline-insert-timeline :append)
