@@ -360,6 +360,3 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 ;; let's get spooky… and foxy
 (setq spookfox-saved-tabs-target '(file+headline "~/Dropbox/Org/spookfox.org" "Open Tabs"))
 (setq spookfox-native-installation-dir "~/.local/bin/")
-
-;; text is for suckers
-(add-hook 'org-agenda-finalize-hook 'org-timeline-insert-timeline :append)
