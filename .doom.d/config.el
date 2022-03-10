@@ -317,6 +317,9 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (add-hook! org-mode 'rainbow-mode)
 (add-hook! prog-mode 'rainbow-mode)
 
+;; Not all the agendas
+(setq org-agenda-files '("~/Dropbox/Org/manage-self.org"))
+
 ;; rust language config
 (after! rustic
   (setq rustic-lsp-server 'rls))
