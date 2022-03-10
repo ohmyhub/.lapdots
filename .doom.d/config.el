@@ -332,45 +332,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 
 (setq elfeed-dashboard-file "~/Dropbox/Org/elfeed-dashboard.org")
 
-;; Hide tabline in certain modes
-(with-eval-after-load 'centaur-tabs
-  (defun centaur-tabs-buffer-groups ()
-    "Organize tabs into groups by buffer."
-    (list
-     (cond
-      ((string-equal "*" (substring (buffer-name) 0 1)) "Emacs")
-      ((memq major-mode '(org-mode
-                          emacs-lisp-mode)) "Org Mode")
-      ((derived-mode-p 'dired-mode) "Dired")
-      ((derived-mode-p 'prog-mode
-                       'text-mode) "Editing")
-      (t "User"))))
-
-  (defun centaur-tabs-hide-tab (buffer)
-    "Hide from the tab bar by BUFFER name."
-    (let ((name (format "%s" buffer)))
-      (or
-       ;; Current window is dedicated window
-       (window-dedicated-p (selected-window))
-
-       ;; Buffer name does match below blacklist
-       (string-match-p
-        (concat "^\\*\\("
-                "e?shell\\|"
-                "Completions\\|"
-                "clangd\\|" ; lsp c/c++
-                "Faces\\|"
-                "Flycheck\\|"
-                "Help\\|"
-                "Doom\\|"
-                "which-key\\|"
-                "helpful\\|"
-                "Occur"
-                "\\).*")
-        name)
-       )))
-  )
-
 ;; config for org-media-note
 (use-package! org-media-note
   :hook (org-mode .  org-media-note-mode)
