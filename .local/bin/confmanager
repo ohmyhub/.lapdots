@@ -49,4 +49,4 @@ case "$choice" in
 		exit 1
 	;;
 esac
-kitty -e emacs "$choice"
+kitty emax "$choice"
