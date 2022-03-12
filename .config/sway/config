@@ -229,9 +229,6 @@ bindsym $mod+r mode "resize"
 
 # misc
 #
-# wofi web search
-bindsym $mod+Shift+s exec woogle.sh
-
 # toggle waybar
 bindsym $mod+o exec killall -SIGUSR1 waybar
 
