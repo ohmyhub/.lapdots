@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Dmenu script for editing some of my more frequently edited config files.
+
+declare options=("kitty
+doom.d/config.el
+doom.d/init.el
+doom.d/packages.el
+sway
+waybar
+fish
+tridactyl
+qutebrowser")
+
+choice=$(echo -e "${options[@]}" | rofi -dmenu -theme ~/.config/rofi/quickconfig.rasi -i -l 9 -c -p ' Edit')
+
+case "$choice" in
+	quit)
+		echo "Program terminated." && exit 1
+	;;
+	kitty)
+		choice="$HOME/.config/kitty/kitty.conf"
+	;;
+    doom.d/config.el)
+		choice="$HOME/.config/doom/config.el"
+	;;
+    doom.d/init.el)
+		choice="$HOME/.config/doom/init.el"
+	;;
+	doon.d/packages.el)
+		choice="$HOME/.config/doom/packages.el"
+	;;
+	sway)
+		choice="$HOME/.config/sway/config"
+	;;
+	waybar)
+		choice="$HOME/.config/waybar/config"
+	;;
+	fish)
+		choice="$HOME/.config/fish/config.fish"
+	;;
+	qutebrowser)
+		choice="$HOME/.config/qutebrowser/config.py"
+	;;
+	tridactyl)
+		choice="$HOME/.config/tridactyl/tridactylrc"
+	;;
+	*)
+		exit 1
+	;;
+esac
+kitty -e emacs "$choice"
