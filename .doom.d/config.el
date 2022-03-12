@@ -443,9 +443,5 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 ;; save images to default org image directory
 (setq org-download-image-dir "~/Dropbox/Org/linked-images/")
 
-;; let's get spooky… and foxy
-(setq spookfox-saved-tabs-target '(file+headline "~/Dropbox/Org/spookfox.org" "Open Tabs"))
-(setq spookfox-native-installation-dir "~/.local/bin/")
-
 ;; count your pixels
 (setq display-pixels-per-inch 176.0)
