@@ -445,3 +445,8 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 
 ;; count your pixels
 (setq display-pixels-per-inch 176.0)
+
+;; cursors do colors
+(setq evil-normal-state-cursor '("dodger blue" box))
+(setq evil-visual-state-cursor '("orange" hollow))
+(setq evil-insert-state-cursor '("yellow" bar))
