@@ -2,7 +2,7 @@
 
 # *Work in Progress*
 
-![Image of Current Configuration](https://raw.githubusercontent.com/ohmyhub/.lapdots/main/misc/images/dumptser-fire.png)
+![Image of Current Configuration](https://codeberg.org/ohmyberg/.lapdots/raw/branch/main/misc/images/dumptser-fire.png)
 
 </div>
 
@@ -22,14 +22,15 @@ are made out of greasy hams.
     -   [Colorschemes](#colorschemes)
 -   [Box of Loose Configuration](#box-of-loose-configuration)
     -   [Ranger File Manager](#ranger-file-manager)
-    -   [Mako Notification Daemon](#mako-notification-daemon)
+    -   [Sway Notification Center](#sway-notification-center)
     -   [Tridactyl Firefox Extension](#tridactyl-firefox-extension)
     -   [Zathura Document Viewer](#zathura-document-viewer)
+    -   [Qutebrowser](#qutebrowser)
 
 ## system Information
 
 -   **Machine** — *Lenovo ThinkPad Yoga 260*
--   **Kernel** — *5.16.4-arch1-1*
+-   **Kernel** — *5.16.14-arch1-1*
 -   **Distro** — *Arch Linux*
 -   **Window Manager** — *Sway (Wayland)*
 -   **Terminal** — *kitty*
@@ -87,10 +88,12 @@ are made out of greasy hams.
     can have syntax highlighting. You can preview images and have image previews
     for video files. You can show a full preview of a pdf file. It's excellent.
 
-### Mako Notification Daemon
--   This little guy is what I use to get desktop notifications. It's great
-    because without it I wouldn't have Discord notifications popping up to
-    remind me I need to disable Discord desktop notifications.
+### Sway Notification Center
+-   I switched over to swaync and haven't looked back. It's not as minimal as
+    mako or dunst but I like it. It give you a little notification panel, and
+    integrates well with waybar. It's great because without it I wouldn't have
+    Discord notifications popping up to remind me I need to disable Discord
+    desktop notifications.
     
 ### Tridactyl Firefox Extension
 -  Vim-like keyboard navigation? In my internet browser!? Yes.
@@ -98,3 +101,10 @@ are made out of greasy hams.
 ### Zathura Document Viewer
 -  Minimal document viewer with vim-like keyboard navigation. I'm starting to
    see a pattern.
+
+### Qutebrowser
+- I've been using this web browser almost as much as I've been using Firefox
+  lately. It's keyboard focused with vim-like keyboard navigation. It's powered
+  by qt and python. I integrated a neat little script that utilizes yt-dlp. I
+  can go to youtube, see a video I like, hit a couple keys, and it will start
+  downloading in the background in my preferred format.
