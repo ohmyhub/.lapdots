@@ -444,7 +444,8 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (setq org-download-image-dir "~/Dropbox/Org/linked-images/")
 
 ;; count your pixels
-(setq display-pixels-per-inch 176.0)
+;;(setq display-pixels-per-inch 176.0)
+(setq display-pixels-per-inch 109.0)
 
 ;; cursors do colors
 (setq evil-normal-state-cursor '("dodger blue" box))
