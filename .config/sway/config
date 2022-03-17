@@ -39,6 +39,8 @@ font pango:JetBrainsMono Nerd Font 16px
 smart_borders on
 default_border pixel 2
 titlebar_border_thickness 2
+smart_gaps on
+gaps inner 7
 
 ## Window decoration
 # class                 border  backgr. text    indicator child_border
