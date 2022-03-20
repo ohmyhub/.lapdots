@@ -456,10 +456,3 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (setq centaur-tabs-close-button ""
       centaur-tabs-modified-marker ""
       centaur-tabs-set-bar 'over)
-
-;; too many bloody buffers in the tab in ranger-mode
-(add-hook! '(+doom-dashboard-mode-hook +popup-buffer-mode-hook 'ranger-mode-hook)
-  (defun +tabs-disable-centaur-tabs-mode-maybe-h ()
-    "Disable `centaur-tabs-mode' in current buffer."
-    (when (centaur-tabs-mode-on-p)
-      (centaur-tabs-local-mode))))
