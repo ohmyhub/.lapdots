@@ -269,6 +269,7 @@
     ("decor" "decor" nil 0)
     ("defendent" "defendant" nil 0)
     ("definately" "definitely" nil 0)
+    ("definetely" "definitely" nil 0)
     ("definded" "defined" nil 0)
     ("dependances" "dependencies" nil 0)
     ("deptartment" "department" nil 0)
