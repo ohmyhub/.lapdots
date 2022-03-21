@@ -6,18 +6,26 @@
 ;; use 'M-x doom/reload'.
 
 ;; org packages
+;;
 (unpin! org)
+
 (package! mixed-pitch)
+
 (package! company-org-block)
+
 (package! org-pandoc-import
   :recipe (:host github
            :repo "tecosaur/org-pandoc-import"
            :files ("*.el" "filters" "preprocessors")))
 
-(package! elfeed-dashboard
-  :recipe (:host github
-           :repo "Manoj321/elfeed-dashboard"))
+;; taking notes on my media
+(package! org-media-note :recipe (:host github :repo "yuchen-lea/org-media-note"))
 
+;; I read a book once
+(package! org-volume :recipe (:host github :repo "akirak/org-volume"))
+
+;; not org packages
+;;
 ;; colorize color names in the buffer
 (package! rainbow-mode)
 
@@ -43,12 +51,6 @@
 
 ;; pretty hydras
 (package! pretty-hydra)
-
-;; taking notes on my media
-(package! org-media-note :recipe (:host github :repo "yuchen-lea/org-media-note"))
-
-;; I read a book once
-(package! org-volume :recipe (:host github :repo "akirak/org-volume"))
 
 ;; vertico in a childframe
 (package! vertico-posframe)
