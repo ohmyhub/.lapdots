@@ -78,7 +78,7 @@
 (setq display-time-load-average nil)
 
 ;; which key? this one.
-(setq which-key-idle-delay 0.0)
+(setq which-key-idle-delay 0)
 (setq which-key-allow-multiple-replacements t)
 (after! which-key
   (pushnew!
