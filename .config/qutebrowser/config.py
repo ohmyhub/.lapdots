@@ -2,6 +2,20 @@
 #   qute://help/configuring.html
 #   qute://help/settings.html
 
+# something I noticed while looking at these dotfiles (https://github.com/SqrtMinusOne/dotfiles/blob/master/.config/qutebrowser/config.py)
+from qutebrowser.api import interceptor
+
+def filter_yt(info: interceptor.Request):
+    """Block the given request if necessary."""
+    url = info.request_url
+    if (url.host() == 'www.youtube.com' and
+                    url.path() == '/get_video_info' and
+                    '&adformat=' in url.query()):
+            info.block()
+
+
+interceptor.register(filter_yt)
+
 # Change the argument to True to still load settings configured via autoconfig.yml
 config.load_autoconfig(False)
 
