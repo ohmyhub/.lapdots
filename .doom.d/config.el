@@ -456,3 +456,14 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (setq centaur-tabs-close-button ""
       centaur-tabs-modified-marker ""
       centaur-tabs-set-bar 'over)
+
+;; a useful function I took from (https://github.com/SqrtMinusOne/dotfiles/blob/master/.emacs.d/init.el)
+(defun kev/org-link-copy (&optional arg)
+  "Extract URL from org-mode link and add it to kill ring."
+  (interactive "P")
+  (let* ((link (org-element-lineage (org-element-context) '(link) t))
+         (type (org-element-property :type link))
+         (url (org-element-property :path link))
+         (url (concat type ":" url)))
+    (kill-new url)
+    (message (concat "Copied URL: " url))))
