@@ -26,13 +26,14 @@ set $menu rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/r
 
 # display
 set $screen_laptop 'eDP-1'
-
+set $screen_acer 'HDMI-A-2'
 ### Output configuration
 #
 # wallpaper
 exec ~/.azotebg
 
 output $screen_laptop scale 1.0 max_render_time 6
+output $screen_acer scale 1.0 max_render_time 6
 
 # Style
 font pango:JetBrainsMono Nerd Font 16px
@@ -40,7 +41,7 @@ smart_borders on
 default_border pixel 2
 titlebar_border_thickness 2
 smart_gaps on
-gaps inner 7
+gaps inner 3
 
 ## Window decoration
 # class                 border  backgr. text    indicator child_border
