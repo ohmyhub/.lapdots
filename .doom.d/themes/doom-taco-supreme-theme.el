@@ -33,13 +33,13 @@ determine the exact padding."
   "A dark theme inspired by the 90's Taco Bell color palette."
 
   ;; name        default   256       16
-  ((bg         '("#1f2b41" nil       nil            )) ;; modified
-   (bg-alt     '("#1f2b41" nil       nil            ))
+  ((bg         '("#172131" nil       nil            )) ;; modified
+   (bg-alt     '("#172131" nil       nil            ))
    (base0      '("#070A0E" "black"   "black"        ))
    (base1      '("#0E131D" "#1e1e1e" "brightblack"  ))
    (base2      '("#151D2B" "#2e2e2e" "brightblack"  ))
    (base3      '("#1F2A3F" "#262626" "brightblack"  ))
-   (base4      '("#283752" "#3f3f3f" "brightblack"  ))
+   (base4      '("#1f2b41" "#3f3f3f" "brightblack"  ))
    (base5      '("#64727d" "#64727d" "brightblack"  ))
    (base6      '("#54D9CD" "#6b6b6b" "brightblack"  ))
    (base7      '("#E8E9EB" "#979797" "brightblack"  ))
@@ -56,7 +56,7 @@ determine the exact padding."
    (yellow     '("#faea7e" "#faea7e" "yellow"       ))
    (blue       '("#7eb9e2" "#7eb9e2" "brightblue"   ))
    (dark-blue  '("#54a3d9" "#54a3d9" "blue"         ))
-   (magenta    '("#d63fb0" "#d63fb0" "magenta"      ))
+   (magenta    '("#8D5FC5" "#8D5FC5" "magenta"      ))
    (salmon     '("#F9B5AC" "#F9B5AC" "orange"       ))
    (violet     '("#8D5FC5" "#8D5FC5" "brightmagenta"))
    (cyan       '("#54D9CD" "#54D9CD" "brightcyan"   ))

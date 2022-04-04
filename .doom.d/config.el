@@ -19,8 +19,8 @@
 
 (setq org-fontify-quote-and-verse-blocks t)
 
-;; we snazzy
-(setq doom-theme 'doom-snazzy)
+;; Live Mas
+(setq doom-theme 'doom-taco-supreme)
 
 ;; fancy splash screen image
 (setq fancy-splash-image "~/Pictures/unbridled-unicorn.png")
