@@ -6,12 +6,12 @@
   "Options for the `doom-taco-supreme' theme."
   :group 'doom-themes)
 
-(defcustom doom-taco-supreme-brighter-comments nil
+(defcustom doom-taco-supreme-brighter-comments t
   "If non-nil, comments will be highlighted in more vivid colors."
   :group 'doom-taco-supreme-theme
   :type 'boolean)
 
-(defcustom doom-taco-supreme-brighter-tabs t
+(defcustom doom-taco-supreme-brighter-tabs nil
   "If non-nil, tabs will a more vivid background color."
   :group 'doom-taco-supreme-theme
   :type 'boolean)
@@ -44,7 +44,7 @@ determine the exact padding."
    (base6      '("#54D9CD" "#6b6b6b" "brightblack"  ))
    (base7      '("#E8E9EB" "#979797" "brightblack"  ))
    (base8      '("#F0F4FC" "#dfdfdf" "white"        ))
-   (fg         '("#EAE5D7"    "#bbb"    "white"        ))
+   (fg         '("#EAE5D7" "#bbb"    "white"        ))
    (fg-alt     '("#A7ACB9" "#bfbfbf" "brightwhite"  ))
 
    (grey       base5)
@@ -53,7 +53,7 @@ determine the exact padding."
    (orange     '("#FAAC7E" "#FAAC7E" "brightred"    ))
    (green      '("#b8f180" "#b8f180" "green"        ))
    (teal       '("#7ea9a9" "#7ea9a9" "brightgreen"  ))
-   (yellow     '("#faea7e" "#faea7e" "yellow"       ))
+   (yellow     '("#ffef6c" "#ffef6c" "yellow"       ))
    (blue       '("#7eb9e2" "#7eb9e2" "brightblue"   ))
    (dark-blue  '("#54a3d9" "#54a3d9" "blue"         ))
    (magenta    '("#8D5FC5" "#8D5FC5" "magenta"      ))
@@ -129,45 +129,62 @@ determine the exact padding."
    (centaur-tabs-active-bar-face :background tabs-bar-bg)
    (centaur-tabs-modified-marker-selected :inherit 'centaur-tabs-selected :foreground tabs-marker)
    (centaur-tabs-modified-marker-unselected :inherit 'centaur-tabs-unselected :foreground tabs-marker)
+
    ;;;; css-mode <built-in> / scss-mode
    (css-proprietary-property :foreground orange)
    (css-property             :foreground green)
    (css-selector             :foreground blue)
+
    ;;;; doom-modeline
    (doom-modeline-project-root-dir :foreground base6)
+
    ;;;; doom-themes
    (doom-themes-treemacs-root-face :foreground highlight :weight 'ultra-bold :height 1.2)
    (doom-themes-treemacs-file-face :foreground highlight)
+
    ;;;; ediff <built-in>
    (ediff-fine-diff-A    :background (doom-darken violet 0.4) :weight 'bold)
    (ediff-current-diff-A :background (doom-darken base0 0.25))
+
    ;;;; elscreen
    (elscreen-tab-other-screen-face :background "#353a42" :foreground "#1e2022")
+
    ;;;; highlight-symbol
    (highlight-symbol-face :background region :distant-foreground fg-alt)
+
    ;;;; highlight-thing
    (highlight-thing :background region :distant-foreground fg-alt)
+
    ;;;; ivy
    (ivy-current-match :background base3)
    (ivy-minibuffer-match-face-2 :foreground highlight :weight 'extra-bold)
    ;;;; ivy-posframe
    (ivy-posframe :background bg-alt)
    (ivy-posframe-border :background highlight)
+
+   ;;;; vertico-posframe
+   (vertico-posframe-border :background "#faea7e")
+
    ;;;; magit
    (magit-diff-hunk-heading           :foreground bg                    :background (doom-blend highlight bg 0.3) :extend t)
    (magit-diff-hunk-heading-highlight :foreground bg                    :background highlight :weight 'bold :extend t)
    (magit-section-heading :foreground highlight)
+
    ;;;; markdown-mode
    (markdown-markup-face :foreground base5)
    (markdown-header-face :inherit 'bold :foreground red)
    ((markdown-code-face &override) :background (doom-lighten base3 0.05))
+
    ;;;; mic-paren
    ((paren-face-match &override) :foreground red :background base3 :weight 'ultra-bold)
    ((paren-face-mismatch &override) :foreground base3 :background red :weight 'ultra-bold)
+
    ;;;; neotree
    (neo-root-dir-face :foreground red)
+
    ;;;; org <built-in>
    (org-hide :foreground hidden)
+
    ;;;; solaire-mode
    (solaire-mode-line-face
     :inherit 'mode-line
@@ -178,9 +195,11 @@ determine the exact padding."
     :background modeline-bg-inactive-l
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive-l)))
    (solaire-hl-line-face :background base3)
+
    ;;;; treemacs
    (treemacs-root-face :foreground highlight :weight 'ultra-bold :height 1.2)
    (treemacs-directory-face :foreground highlight)
+
    ;;;; vimish-fold
    ((vimish-fold-overlay &override) :inherit 'font-lock-comment-face :background base3 :weight 'light)
    ((vimish-fold-fringe &override)  :foreground teal))

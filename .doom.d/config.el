@@ -429,9 +429,9 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 ;; vertico but posframey
 (after! doom-modeline
   (vertico-posframe-mode 1)
-  (setq vertico-posframe-border-width 5)
-  (custom-set-faces!
-    '(vertico-posframe-border :inherit default :background "#2F3140")))
+  (setq vertico-posframe-border-width 5))
+;;  (custom-set-faces!
+;;    '(vertico-posframe-border :inherit default :background "#2F3140")))
 
 (setq vertico-posframe-parameters
       '((left-fringe . 8)
