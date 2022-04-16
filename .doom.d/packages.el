@@ -52,9 +52,6 @@
 ;; pretty hydras
 (package! pretty-hydra)
 
-;; vertico in a childframe
-(package! vertico-posframe)
-
 ;; focus!
 (package! focus)
 
