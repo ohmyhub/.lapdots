@@ -261,6 +261,10 @@ bindsym $mod+Shift+i exec "kitty --config /home/kevin/.config/kitty/htop_kitty.c
 # quick edit configs
 bindsym $mod+q exec confmanager
 
+# rofi pass menu
+set $passmenu /home/kevin/.local/bin/passmenu-rofi-wayland
+bindsym $mod+Shift+P exec $passmenu
+
 #
 # Status Bar:
 #
