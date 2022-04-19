@@ -12,4 +12,5 @@
        :desc "Ranger in emacs" :n                       "r"      #'ranger                       ; go go dired-ranger
        :desc "Insert today's date" :n                   "t"      #'today                        ; insert my flavor of date
        :desc "Copy region into kill ring" :n            "c"      #'copy-region-as-kill          ; quick copy without cutting
-       :desc "Evaluate buffer and reload fonts" :n      "v"      #'evig))                       ; eval buffer and reload fonts
+       :desc "Evaluate buffer and reload fonts" :n      "v"      #'evig                         ; eval buffer and reload fonts
+       :desc "Activate webjump" :n                      "w"      #'webjump))                    ; select url from list and open in web browser
