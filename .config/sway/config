@@ -265,6 +265,9 @@ bindsym $mod+q exec confmanager
 set $passmenu /home/kevin/.local/bin/passmenu-rofi-wayland
 bindsym $mod+Shift+P exec $passmenu
 
+# urgency
+focus_on_window_activation focus
+
 #
 # Status Bar:
 #
