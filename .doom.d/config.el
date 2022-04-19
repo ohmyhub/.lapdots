@@ -467,3 +467,12 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
          (url (concat type ":" url)))
     (kill-new url)
     (message (concat "Copied URL: " url))))
+
+;; webjump list
+(setq webjump-sites
+      '(("Discord" . "https://canary.discord.com/channels/@me")
+      ("Reddit - All" . "https://www.reddit.com/r/all/")
+      ("Youtube" . "https://www.youtube.com/")
+      ("Github" . "https://github.com/")
+      ("Gmail" . "https://gmail.google.com/mail/")
+      ("Reddit - Linux" . "https://www.reddit.com/r/linux/")))
