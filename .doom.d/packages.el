@@ -32,6 +32,10 @@
 ;; hot fresh themes
 (unpin! doom-themes)
 
+(package! doom-moonfly-theme
+  :recipe (:host github
+           :repo "stackmystack/doom-moonfly-theme"))
+
 ;; hot fresh terminal
 (unpin! vterm)
 
