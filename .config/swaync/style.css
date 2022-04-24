@@ -5,49 +5,57 @@
 @define-color border-color rgb(7, 7, 7);
 @define-color bg rgb(58, 58, 58);
 @define-color bg-hover rgb(68, 68, 68);
-@define-color bg-focus rgba(68, 68, 68, 0);
+@define-color bg-focus rgba(68, 68, 68, 0.6);
 @define-color bg-selected rgb(0, 128, 255);
 
 .notification-row {
   outline: none;
 }
-.notification-row:focus {
-  background: rgba(0, 0, 0, 0);
-  /*background: @bg-focus;*/
+.notification-row:focus,
+.notification-row:hover {
+  background: @bg-focus;
 }
 
 .notification {
-  /*border-radius: 10px;
+  border-radius: 10px;
   margin: 6px 12px;
   box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.3);
-  padding: 0;*/
-  background: rgba(0,0,0,0);
+  padding: 0;
 }
 
+/* Uncomment to enable specific urgency colors
+.low {
+  background: yellow;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.normal {
+  background: green;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.critical {
+  background: red;
+  padding: 6px;
+  border-radius: 10px;
+}
+*/
+
 .notification-content {
-
-  border: solid;
-  border-width: 1.3px;
-  border-color: #000;
-  box-shadow: inset 0px 1.2 #606167;
-  background-color:  #1C1E26;
-  padding: 0px 10px 0px 10px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  border-radius: 8;
-
-  /*
   background: transparent;
   padding: 6px;
-  border-radius: 10px;*/
+  border-radius: 10px;
 }
 
 .close-button {
   background: black;
   color: white;
   text-shadow: none;
-  padding: 0;
+  padding: 0 2px;
   box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
 }
 .close-button:hover {
   background: rgb(30, 30, 30);
@@ -56,30 +64,29 @@
 
 .notification-default-action,
 .notification-action {
-  background: rgba(0,0,0,0);
   padding: 4px;
+  margin: 0;
+  box-shadow: none;
+  background: @bg;
+  border: 1px solid @border-color;
 }
 
 .notification-default-action:hover,
 .notification-action:hover {
-  background: rgba(0,0,0,0);
   background: @bg-hover;
 }
 
 .notification-default-action {
-  background: rgba(0,0,0,0);
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 /* When alternative actions are visible */
 .notification-default-action:not(:only-child) {
-  background: rgba(0,0,0,0);
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
 
 .notification-action {
-  background: rgba(0,0,0,0);
   border-radius: 0px;
   border-top: none;
   border-right: none;
@@ -87,12 +94,10 @@
 
 /* add bottom border radius to eliminate clipping */
 .notification-action:first-child {
-  background: rgba(0,0,0,0);
-  border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 10px;
 }
 .notification-action:last-child {
-  background: rgba(0,0,0,0);
-  border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 10px;
   border-right: 1px solid @border-color;
 }
 
@@ -102,7 +107,7 @@
 .body-image {
   margin-top: 6px;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .summary {
@@ -116,7 +121,7 @@
 }
 
 .body {
-  background: rgba(0,0,0,0);
+  background: transparent;
   color: white;
   text-shadow: none;
 }
@@ -127,16 +132,12 @@
 }
 
 .control-center-clear-all {
-  border: solid;
-  border-width: 1.3px;
-  border-color: #000;
-  box-shadow: inset 0px 1.2 #606167;
-  background-color:  #1C1E26;
-  padding: 0px 10px 0px 10px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  border-radius: 8;
-
+  color: white;
+  text-shadow: none;
+  background: @bg;
+  border: 1px solid @border-color;
+  box-shadow: none;
+  border-radius: 10px;
 }
 .control-center-clear-all:hover {
   background: @bg-hover;
@@ -158,13 +159,9 @@
 
 .control-center {
   background: rgba(0, 0, 0, 0.7);
-  border-radius: 8 0 0 0;
-  padding: 8;
-  margin: 8;
 }
 .control-center-list {
   background: transparent;
-  /*background: transparent;*/
 }
 
 .floating-notifications {
