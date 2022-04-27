@@ -407,11 +407,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (after! rustic
   (setq rustic-lsp-server 'rls))
 
-;; Stop trying to format my shitty C code
-(setq +format-on-save-enabled-modes
-      '(not c-mode
-            make-mode))
-
 ;; Feed me
 (after! elfeed
   (setq elfeed-search-filter "@2-month-ago +unread"))
@@ -429,7 +424,7 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 ;; vertico but posframey
 (after! doom-modeline
   (vertico-posframe-mode 1)
-  (setq vertico-posframe-border-width 5))
+  (setq vertico-posframe-border-width 2))
 ;;  (custom-set-faces!
 ;;    '(vertico-posframe-border :inherit default :background "#2F3140")))
 

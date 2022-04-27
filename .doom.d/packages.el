@@ -56,9 +56,6 @@
 ;; pretty hydras
 (package! pretty-hydra)
 
-;; focus!
-(package! focus)
-
 ;; don't allow native compilation
 (package! with-editor :recipe (:build (:not native-compile)))
 (package! vterm :recipe (:build (:not native-compile)))
