@@ -471,3 +471,14 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
       ("Github" . "https://github.com/")
       ("Gmail" . "https://gmail.google.com/mail/")
       ("Reddit - Linux" . "https://www.reddit.com/r/linux/")))
+
+;; emacs in the browser
+(atomic-chrome-start-server)
+(setq atomic-chrome-default-major-mode 'org-mode
+      atomic-chrome-buffer-open-style 'frame)
+
+;; Set transparency of emacs
+(defun transparency (value)
+  "Sets the transparency of the frame window. 0=transparent/100=opaque"
+  (interactive "nTransparency Value 0 - 100 opaque:")
+  (set-frame-parameter (selected-frame) 'alpha value))

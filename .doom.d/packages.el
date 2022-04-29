@@ -56,6 +56,9 @@
 ;; pretty hydras
 (package! pretty-hydra)
 
+;; emacs somewhere
+(package! atomic-chrome)
+
 ;; don't allow native compilation
 (package! with-editor :recipe (:build (:not native-compile)))
 (package! vterm :recipe (:build (:not native-compile)))
