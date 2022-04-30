@@ -20,7 +20,7 @@
 (setq org-fontify-quote-and-verse-blocks t)
 
 ;; Live Mas
-(setq doom-theme 'doom-taco-supreme)
+(setq doom-theme 'doom-snazzy)
 
 ;; fancy splash screen image
 (setq fancy-splash-image "~/Pictures/unbridled-unicorn.png")
@@ -482,3 +482,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
   "Sets the transparency of the frame window. 0=transparent/100=opaque"
   (interactive "nTransparency Value 0 - 100 opaque:")
   (set-frame-parameter (selected-frame) 'alpha value))
+
+;; wrap it
+(add-hook 'visual-line-mode-hook #'visual-fill-column-mode)
