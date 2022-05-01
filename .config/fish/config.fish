@@ -1,7 +1,7 @@
 if status is-interactive
 
     # swayland
-    set -gx QT_QPA_PLATFORM wayland
+    set -gx QT_QPA_PLATFORM wayland-egl
     set -gx MOZ_ENABLE_WAYLAND 1
     set -gx MOZ_DBUS_REMOTE 1
     set -gx MOZ_WEBRENDER 1
@@ -10,14 +10,13 @@ if status is-interactive
     set -gx XDG_SESSION_DESKTOP sway
     set -gx XDG_SESSION_TYPE wayland
     set -gx CLUTTER_BACKEND wayland
-    set -gx GDK_BACKEND wayland
+    set -gx ECORE_EVAS_ENGINE wayland-egl
     set -gx ELM_ENGINE wayland_egl
     set -gx SDL_VIDEODRIVER wayland
     set -gx _JAVA_AWT_WM_NONREPARENTING 1
     set -gx NO_AT_BRIDGE 1
     set -gx STATUSBAR waybar
     set -gx SWAY_CURSOR_SIZE 16
-    set -gx XDG_RUNTIME_DIR /tmp/user/(id -u)
 
     # hush now
     set -gx fish_greeting ""
@@ -129,6 +128,7 @@ if status is-interactive
     # set -g fish_pager_color_completion $foreground
     # set -g fish_pager_color_description $gray
 
+    bass source ~/.profile
     starship init fish | source
 
 end
