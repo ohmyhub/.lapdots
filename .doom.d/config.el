@@ -300,7 +300,8 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
               :end           "∎"
               :log           "⬓"
               :email         ""
-              :logbook       ""))
+              :logbook       ""
+              :modified      ""))
   (set-ligatures! 'org-mode
     :merge t
     :checkbox      "[ ]"
@@ -340,7 +341,8 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
     :drawer        ":drawer:"
     :log           ":log:"
     :email         "#+email:"
-    :logbook       ":logbook:")
+    :logbook       ":logbook:"
+    :modified      "#+modified:")
   (plist-put +ligatures-extra-symbols :name "⁍"))
 
 ;; so pretty
@@ -485,3 +487,14 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 
 ;; wrap it
 (add-hook 'visual-line-mode-hook #'visual-fill-column-mode)
+
+;; last modified hook
+(after! org
+  (setq time-stamp-active t
+    time-stamp-start "#\\+modified:[ \t]*"
+    time-stamp-end "$"
+    time-stamp-format "\[%Y-%02m-%02d %3a %02H:%02M\]")
+(add-hook 'before-save-hook 'time-stamp))
+
+;; add frings
+(set-fringe-mode 8)
