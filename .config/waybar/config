@@ -42,7 +42,7 @@
   },
   "custom/power": {
     "format": "",
-    "on-click": "wlogout",
+    "on-click": "nwg-bar",
     "tooltip": false
   },
   "clock": {
