@@ -209,6 +209,10 @@ config.bind(",M", "hint links spawn --detach umpv --force-window yes {hint-url}"
 # hackerman download youtube videos with yt-dlp
 config.bind(",y", "hint links spawn -u yt-get {hint-url}")
 
+# download url
+config.bind(";D", "hint all userscript url-dl")
+config.bind(";i", "hint images userscript url-dl")
+
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova
 # Tokyo Night scheme by enkia (https://github.com/enkia)
