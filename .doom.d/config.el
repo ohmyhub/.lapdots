@@ -498,3 +498,5 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 
 ;; add frings
 (set-fringe-mode 8)
+
+(+global-word-wrap-mode +1)
