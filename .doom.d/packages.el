@@ -62,6 +62,9 @@
 ;; wrap it up
 (package! visual-fill-column)
 
+;; imenu list
+(package! imenu-list)
+
 ;; don't allow native compilation
 (package! with-editor :recipe (:build (:not native-compile)))
 (package! vterm :recipe (:build (:not native-compile)))
