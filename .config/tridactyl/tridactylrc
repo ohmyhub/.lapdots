@@ -53,7 +53,7 @@ autocmd DocStart roll20.net mode ignore
 " guiset_quiet hoverlink right
 
 " Set the colorscheme
-colorscheme midnight
+colorscheme catppuccin
 
 " Defaults to 300ms but I want to be more faster
 set hintdelay 100
@@ -63,3 +63,6 @@ jsb browser.webRequest.onHeadersReceived.addListener(tri.request.clobberCSP,{url
 
 " hint mode
 set hintfiltermode simple
+
+" Escape also hides search highlights
+bind <Escape> composite hidecmdline ; mode normal ; nohlsearch
