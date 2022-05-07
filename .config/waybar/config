@@ -1,6 +1,6 @@
 {
   "position": "top",
-  "height": 42,
+  "height": 16,
   "modules-left": [
     "custom/menu",
     "sway/workspaces"
@@ -51,7 +51,7 @@
     "format-alt": "{:%Y-%m-%d}"
   },
   "tray": {
-    "icon-size": 21,
+    "icon-size": 15,
     "spacing": 5
   },
   "battery": {
