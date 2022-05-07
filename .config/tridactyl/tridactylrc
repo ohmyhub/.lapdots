@@ -57,3 +57,9 @@ colorscheme midnight
 
 " Defaults to 300ms but I want to be more faster
 set hintdelay 100
+
+" Increase functionality at the expense of security
+jsb browser.webRequest.onHeadersReceived.addListener(tri.request.clobberCSP,{urls:["<all_urls>"],types:["main_frame"]},["blocking","responseHeaders"])
+
+" hint mode
+set hintfiltermode simple
