@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-05-07 Sat 21:13]
+#+modified: [2022-05-07 Sat 21:16]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=400 height=400/></p>
 #+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></p>
@@ -811,8 +811,7 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
   (setq org-appear-autoemphasis t
         org-appear-autosubmarkers t))
 #+end_src
-/
-/
+<br/>
 + A little bit of configuration for the company-org-block package. It's just
   another method of making it easier to insert org-src blocks easily.
 #+begin_src emacs-lisp :tangle yes
@@ -886,7 +885,7 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
       ("Gmail" . "https://gmail.google.com/mail/")
       ("Reddit - Linux" . "https://www.reddit.com/r/linux/")))
 #+end_src
-/
+
 *** Atomic Chrome
 + This is an interesting and fun emacs web-browser integration. This package in
   combination with a Firefox extension allows me to use emacs to edit any text I
