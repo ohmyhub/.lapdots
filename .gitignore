@@ -2,5 +2,6 @@
 .idea
 *.log
 tmp/
-*.org
+README.org
 /.config/qutebrowser/quickmarks
+/.doom.d/config.el
