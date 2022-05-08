@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-05-07 Sat 21:24]
+#+modified: [2022-05-08 Sun 13:56]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=300 height=300/></p>
 #+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></p>
@@ -26,8 +26,6 @@ someone who aspires to be a programming /hobbyist/.
 What you are about to witness is a perpetual work in progress. It won't be
 pretty, but it might be interesting.
 
------
-
 ** _The Basics_
 *** Step One
 + Make this file run (slightly) faster with lexical binding (see [[https://nullprogram.com/blog/2016/12/22/][this blog post]]
@@ -35,7 +33,6 @@ pretty, but it might be interesting.
 #+begin_src emacs-lisp :tangle yes
 ;;; config.el -*- lexical-binding: t; -*-
 #+end_src
-
 
 *** Personal Information
 + Who am I? This is used by GPG and all sorts of other things.
@@ -45,8 +42,6 @@ pretty, but it might be interesting.
       user-mail-address "mail@kevinward.xyz")
 #+end_src
 
------
-
 ** _Quality of Life Improvements_
 *** Better Defaults
 + Where is my org directory located? This is a little out of place but it needs
@@ -55,7 +50,6 @@ pretty, but it might be interesting.
 ;; where the org at?
 (setq org-directory "~/Dropbox/Org/")
 #+end_src
-
 
 + This might as well go here. At the moment I only use roam for daily
   journaling. Someday I might get around to using more of it's functionality.
@@ -71,13 +65,11 @@ pretty, but it might be interesting.
                             "#+title: %<%Y-%m-%d>\n"))))
 #+end_src
 
-
 + I don't really need line numbers.
 #+begin_src emacs-lisp :tangle yes
 ;; I don't care about line numbers
 (setq display-line-numbers-type nil)
 #+end_src
-
 
 + It's the little things that make a house a home. Or a text editor a home.
 #+begin_src emacs-lisp :tangle yes
@@ -89,13 +81,11 @@ pretty, but it might be interesting.
  uniquify-buffer-name-style 'forward)             ; This is my buffer. There are many like it but this one is mine
 #+end_src
 
-
 + Just mash those buttons to escape.
 #+begin_src emacs-lisp :tangle yes
 ;; mash jk without thinking
 (setq evil-escape-unordered-key-sequence t)
 #+end_src
-
 
 + You can't tell me where to go Emacs. I'll go past the end of the line if I
   want to. Also, when I leave insert mode don't move my cursor. Just leave it
@@ -104,7 +94,6 @@ pretty, but it might be interesting.
 (setq evil-move-beyond-eol t)           ; let me go where I want to go!
 (setq evil-move-cursor-back nil)        ; don't move my cursor around!
 #+end_src
-
 
 + If I didn't have undo I don't know what I'd do.
 #+begin_src emacs-lisp :tangle yes
@@ -118,14 +107,12 @@ pretty, but it might be interesting.
       recentf-max-saved-items 50)                 ; Saving and exiting has been slow lately. Maybe this will help?
 #+end_src
 
-
 + What time is it?
 #+begin_src emacs-lisp :tangle yes
 ;; what time is it?
 (display-time-mode 1)
 (setq display-time-load-average nil)
 #+end_src
-
 
 + Without ~which-key~ I'd still be stuck in that first scratch buffer. It can get
   a little clogged with the word /evil/ when you use /evil-mode/ so let's filter
@@ -142,7 +129,6 @@ pretty, but it might be interesting.
    ))
 #+end_src
 
-
 + A tweak to get ~which-key~ dispatch working.
 #+begin_src emacs-lisp :tangle yes
 ;; tell which-key to behave
@@ -158,14 +144,12 @@ pretty, but it might be interesting.
       (apply fn args))))
 #+end_src
 
-
 + The ~avy~ package is incredibly useful for getting around a buffer. I don't want
   it to limit itself to the current buffer or window only.
 #+begin_src emacs-lisp :tangle yes
 ;; all of them!
 (setq avy-all-windows t)
 #+end_src
-
 
 + When I'm slicing and dicing windows I want them to default to splitting to the
   right or to the bottom of the frame. Also, ask me what buffer to use in the
@@ -180,7 +164,6 @@ pretty, but it might be interesting.
   (consult-buffer))
 #+end_src
 
-
 + Promptly prompt me per our previous promise
 #+begin_src emacs-lisp :tangle yes
 ;; I like prompt prompts
@@ -190,12 +173,10 @@ pretty, but it might be interesting.
 (setq company-selection-wrap-around t)
 #+end_src
 
-
 + Wrap your words and your willy.
 #+begin_src emacs-lisp :tangle yes
 (+global-word-wrap-mode +1)
 #+end_src
-
 
 + Let's load my custom keybindings that I put in separate file for reasons I no
   longer remember. Oh, and my ~abbrev~ definitions that automagically fix many
@@ -207,7 +188,6 @@ pretty, but it might be interesting.
 ;; abbrev mode definitions
 (load! "abbrev")
 #+end_src
-
 
 *** Helpful Functions
 + A helpful individual over on [[https://www.reddit.com/r/orgmode/comments/f63n53/is_there_an_easy_way_to_insert_an_image_link/fi46wpr/][reddit]] threw together this lovely function that
@@ -235,7 +215,6 @@ an optional caption (leave it empty for no caption)."
      (format "#+caption: %s\n[[%s]]" caption img))))
 #+end_src
 
-
 + I want to be able to insert an active timestamp with relative ease.
 #+begin_src emacs-lisp :tangle yes
 (defun kev/get-timestamp ()
@@ -245,14 +224,12 @@ an optional caption (leave it empty for no caption)."
   (org-time-stamp '(16) t))
 #+end_src
 
-
 + Open the file that I'm currently writing this in.
 #+begin_src emacs-lisp :tangle yes
 (defun org-open-config-file ()
   (interactive)
   (find-file "~/.doom.d/config.org"))
 #+end_src
-
 
 + A helper function that I stole from jeet to reload this file after it's
   tangled.
@@ -265,12 +242,10 @@ an optional caption (leave it empty for no caption)."
   (message "Reloaded!"))
 #+end_src
 
-
 #+begin_src emacs-lisp :tangle yes
 (map! :leader
       "h r c" #'kev/reload)
 #+end_src
-
 
 + Evaluate configuration and reload fonts.
 #+begin_src emacs-lisp :tangle yes
@@ -282,7 +257,6 @@ an optional caption (leave it empty for no caption)."
   (doom/reload-font))
 #+end_src
 
-
 + I have an org document for each project I'm working on. When I take meeting
   notes I'll enter the meeting as a new heading. This little guy, in combination
   with a keybind, spits out the date formatted the way I like it.
@@ -293,7 +267,6 @@ an optional caption (leave it empty for no caption)."
   (interactive)                 ; permit invocation in minibuffer
   (insert (format-time-string "%Y-%m-%d, %A")))
 #+end_src
-
 
 + A handy function I stole from @tecosaur to create a new org-mode buffer.
 #+begin_src emacs-lisp :tangle yes
@@ -311,7 +284,6 @@ an optional caption (leave it empty for no caption)."
         (org-mode)))))
 #+end_src
 
-
 + I want to tangle this configuration file when I save it.
 #+begin_src emacs-lisp :tangle yes
 ;; tangle literate config on save
@@ -325,7 +297,6 @@ an optional caption (leave it empty for no caption)."
         (lambda ()
           (add-hook 'after-save-hook #'org-babel-tangle-config)))
 #+end_src
-
 
 + A little helper function that let's you extract the url from an org-mode link
   and copy it to the kill ring.
@@ -342,8 +313,6 @@ an optional caption (leave it empty for no caption)."
     (message (concat "Copied URL: " url))))
 #+end_src
 
------
-
 ** _Lookin' Good_
 *** Theme
 + I'm using a WIP progress doom theme I've tentatively named taco-supreme. It
@@ -352,7 +321,6 @@ an optional caption (leave it empty for no caption)."
 ;; Live Mas
 (setq doom-theme 'doom-taco-supreme)
 #+end_src
-
 
 *** Fonts
 + I enjoy a nice looking font. I'm also a fan of eye candy. So things like
@@ -375,7 +343,6 @@ an optional caption (leave it empty for no caption)."
 (setq org-fontify-quote-and-verse-blocks t)
 #+end_src
 
-
 + Mixing monospace and variable pitched fonts in org-mode gives you a visually
   impressive workspace. Once again I am swiping a bit of config from the
   impressive @tecosaur.
@@ -393,7 +360,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (add-hook 'doom-init-ui-hook #'init-mixed-pitch-h)
 #+end_src
 
-
 *** Doom Dashboard
 + The first thing you see when you fire up Doom Emacs is the Doom Dashboard. I'm
   using this glorious rainbow unicorn that's from some github error page.
@@ -402,13 +368,11 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (setq fancy-splash-image "~/Pictures/unbridled-unicorn.png")
 #+end_src
 
-
 + I wanted a more minimal dashboard so I removed the text menu
 #+begin_src emacs-lisp :tangle yes
 ;; simplify the startup screen
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
 #+end_src
-
 
 *** Modeline
 + When I see text in red I assume something has gone wrong. The default in Doom
@@ -419,7 +383,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (custom-set-faces!
   '(doom-modeline-buffer-modified :foreground "orange"))
 #+end_src
-
 
 + This specifies exactly what items I want shown in the modeline. It also adds a
   little padding on the right edge and increases it's overall height. I like a
@@ -433,7 +396,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 
 (setq doom-modeline-height 40)
 #+end_src
-
 
 + A custom modeline for pdf files stolen from @jeet who stole it from @teco.
 #+begin_src emacs-lisp :tangle yes
@@ -476,7 +438,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
   (add-hook! 'pdf-view-mode-hook 'doom-set-pdf-modeline-h))
 #+end_src
 
-
 *** Package/Module UI
 **** Vertico
 + I use ~vertico~ and the Doom Emacs affiliated modules/packages as my completion
@@ -492,7 +453,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
         (right-fringe . 8)))
 #+end_src
 
-
 **** Avy
 + I barely use the avy package which is a shame because it's excellent. I do use
   it to navigate between multiple windows. This was a hot tip from the mighty
@@ -505,7 +465,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
     :weight bold :height 1.0 :box (:line-width 10 :color "#f7768e")))
 #+end_src
 
-
 **** Evil States
 + Texas. I'm just kidding. I like my cursor to change shape and color to make
   blindingly obvious to my oblivious brain what modal state I'm in.
@@ -515,7 +474,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (setq evil-visual-state-cursor '("orange" hollow))
 (setq evil-insert-state-cursor '("yellow" bar))
 #+end_src
-
 
 **** Centaur Tabs
 + I like tab buffers but I wanted to add my own little design flair to the tab
@@ -528,7 +486,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
       centaur-tabs-set-bar 'over)
 #+end_src
 
-
 **** Rainbow Mode
 + Hexcodes are colorized with the rainbow-mode package. Rainbow-mode is hooked
   into org-mode and all programming modes.
@@ -537,7 +494,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (add-hook! org-mode 'rainbow-mode)
 (add-hook! prog-mode 'rainbow-mode)
 #+end_src
-
 
 *** Other
 + fringe-mode will add a little padding at the fringes of your frames. I'm a big
@@ -556,8 +512,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (setq display-pixels-per-inch 109.0)
 #+end_src
 
------
-
 ** _Org Mode is Best Mode_
 *** Small but important
 + Give my headings their space!
@@ -565,7 +519,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 ;; stay out of my personal space
 (setq org-cycle-separator-lines -1)
 #+end_src
-
 
 + When I open a file link in org-mode what will the file open in by default?
 #+begin_src emacs-lisp :tangle yes
@@ -580,14 +533,12 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
         ("\\.epub\\'" . "foliate %s")))
 #+end_src
 
-
 + Ideally I'll keep all my TODO items in a master file. When I open my
   org-agenda I don't want it to look anywhere else except that file.
 #+begin_src emacs-lisp :tangle yes
 ;; Not all the agendas
 (setq org-agenda-files '("~/Dropbox/Org/manage-self.org"))
 #+end_src
-
 
 + Thank you @tecosaur for the wonderful [[https://github.com/tecosaur/org-pandoc-import][org-pandoc-import]] package. I want all
   the text in org-mode please.
@@ -596,14 +547,12 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (use-package! org-pandoc-import :after org)
 #+end_src
 
-
 + I like nesting headlines and I want LaTeX to respect that when I use it to
   pummel an org document into the shape of a pdf.
 #+begin_src emacs-lisp :tangle yes
 ;; go deep!
 (setq org-export-headline-levels 5)
 #+end_src
-
 
 + This is something I took me a long time to find. I wanted to automatically insert a timestamp into an org-mode document every time I modified and saved it. This hook will insert a date and time under the the document header I call ~#+modified~.
 #+begin_src emacs-lisp :tangle yes
@@ -615,7 +564,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
     time-stamp-format "\[%Y-%02m-%02d %3a %02H:%02M\]")
 (add-hook 'before-save-hook 'time-stamp))
 #+end_src
-
 
 *** Make It Pretty!
 + I use org-mode to create task lists. Having keywords I can assign to a heading
@@ -639,7 +587,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
           ("REMINDER" :foreground "#8DDFF3" :weight normal :underline nil))))
 #+end_src
 
-
 + I find these face attributes to be the most pleasing for my org headings.
 #+begin_src emacs-lisp :tangle yes
 ;; you got custom on my face
@@ -657,13 +604,11 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
   '(org-document-title :height 1.5))
 #+end_src
 
-
 + I did say /make it pretty/ did I not?
 #+begin_src emacs-lisp :tangle yes
 ;; so pretty
 (add-hook 'org-mode-hook #'+org-pretty-mode)
 #+end_src
-
 
 + Who wants normal old bullets for their headings anyway?
 #+begin_src emacs-lisp :tangle yes
@@ -672,7 +617,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
   (setq org-superstar-headline-bullets-list '("◉" "○" "✸" "•" "◆" "✜" "✤" "▹")
         org-superstar-prettify-item-bullets t ))
 #+end_src
-
 
 + A couple of things are going on in this next bit. I think the downward facing
   triangle looks nicer than the ellipses for folded org trees. Also, I don't
@@ -692,7 +636,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
         (?D . 'all-the-icons-green)
         (?E . 'all-the-icons-blue)))
 #+end_src
-
 
 + I replace a bunch of common org-mode specific words with fancy a glyph or
   icons. I ripped straight out of @tecosaur config with some minor tweaks and
@@ -784,20 +727,17 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
   (plist-put +ligatures-extra-symbols :name "⁍"))
 #+end_src
 
-
 + Oh yea, I still need to hook fancy priorities into org-mode.
 #+begin_src emacs-lisp :tangle yes
 ;; More. Fancy.
 (add-hook! org-mode 'org-fancy-priorities-mode)
 #+end_src
 
-
 + Get out of here stars! Never talk to me or my Unicode bullets again.
 #+begin_src emacs-lisp :tangle yes
 ;; get out of my face stars
 (setq org-hide-leading-stars t)
 #+end_src
-
 
 + Defines a minor mode to allow special forms such as /italics/, *bold*, _underline_
   and =literal= to be editable when the cursor is over them, otherwise display the
@@ -824,8 +764,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
   (set-company-backend! 'org-mode-hook '(company-org-block company-capf)))
 #+end_src
 
------
-
 ** _The Experiments_
 *** Rust
 + I like to pretend I'm going to do something with rust one day.
@@ -834,7 +772,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (after! rustic
   (setq rustic-lsp-server 'rls))
 #+end_src
-
 
 *** Elfeed
 + A little rss to feed my appetite for configuring something more than I use it.
@@ -845,7 +782,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 
 (setq elfeed-dashboard-file "~/Dropbox/Org/elfeed-dashboard.org")
 #+end_src
-
 
 *** org-media-note
 + Control mpv from within emacs and integrate your notes into the video by way
@@ -860,7 +796,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
   (setq org-media-note-screenshot-image-dir "~/Pictures/"))  ;; Folder to save screenshot
 #+end_src
 
-
 *** org-volume
 + An interesting tool for obtaining data on books and integrate that into an
   org-mode workflow.
@@ -871,7 +806,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 ;; save images to default org image directory
 (setq org-download-image-dir "~/Dropbox/Org/linked-images/")
 #+end_src
-
 
 *** Webjump
 + An oldie but a goodie. This is a quick way to open my most often visited
