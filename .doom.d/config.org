@@ -1,8 +1,8 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-05-07 Sat 20:07]
-#+options: title:nil
+#+modified: [2022-05-07 Sat 20:09]
+#+options: title:nil H:4
 #+html: <div align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></div>
 
 * Eliterate Config: A hot mess
