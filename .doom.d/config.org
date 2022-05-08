@@ -1,10 +1,10 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-05-07 Sat 20:44]
+#+modified: [2022-05-07 Sat 20:49]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=200 height=200/></p>
-#+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a> <a href="https://codeberg.org/ohmyberg/.lapdots/src/branch/main/.doom.d/config.org"<img src="https://img.shields.io/badge/THIS%20IS%20A%20BIG%20COLORFUL%20BADGE%20THAT%20DOES%20NOTHING-orange?style=for-the-badge&labelColor=orange"</a></p>
+#+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a> <a href="https://codeberg.org/ohmyberg/.lapdots/src/branch/main/.doom.d/config.org"><img src="https://img.shields.io/badge/THIS%20IS%20A%20BIG%20COLORFUL%20BADGE%20THAT%20DOES%20NOTHING-orange?style=for-the-badge&labelColor=orange"></a></p>
 
 * Eliterate Config: A hot mess
 I am not an organized person. The system I use to organize my life is based
