@@ -59,9 +59,6 @@
 ;; emacs somewhere
 (package! atomic-chrome)
 
-;; wrap it up
-(package! visual-fill-column)
-
 ;; imenu list
 (package! imenu-list)
 

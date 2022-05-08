@@ -485,9 +485,6 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
   (interactive "nTransparency Value 0 - 100 opaque:")
   (set-frame-parameter (selected-frame) 'alpha value))
 
-;; wrap it
-(add-hook 'visual-line-mode-hook #'visual-fill-column-mode)
-
 ;; last modified hook
 (after! org
   (setq time-stamp-active t
