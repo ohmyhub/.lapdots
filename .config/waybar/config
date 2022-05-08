@@ -5,6 +5,9 @@
     "custom/menu",
     "sway/workspaces"
   ],
+  "modules-center": [
+  "custom/musikcube"
+  ],
   "modules-right": [
     "custom/notification",
     "network",
@@ -29,6 +32,14 @@
       "6": "",
       "7": ""
     }
+  },
+  "custom/musikcube": {
+    "exec": "/usr/bin/python3 /home/kevin/.local/bin/mediaplayer.py --player musikcube",
+    "format": "{} ",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
   },
   "custom/date": {
     "format": " {}",

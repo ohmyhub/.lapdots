@@ -18,6 +18,7 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 set $term_float kitty --config /home/kevin/.config/kitty/htop_kitty.conf --class floating_shell
+set $float_term kitty --config /home/kevin/.lapdots/.config/kitty/floating_kitty.conf --class floating_terminal
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -95,6 +96,7 @@ bindswitch tablet:off output $screen_laptop transform 0
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+t exec $float_term
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -120,6 +122,8 @@ bindswitch tablet:off output $screen_laptop transform 0
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pamixer --get-volume > $SWAYSOCK.wob
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    bindsym $mod+m exec playerctl play-pause
+
 
     # Monitor brightness
     bindsym XF86MonBrightnessDown exec brightnessctl set 5-%

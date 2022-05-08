@@ -118,3 +118,15 @@ window#waybar {
 #idle_inhibitor.deactivated {
     color: white;
 }
+
+#custom-musikcube {
+    background-color: #24283b;
+    color: #9ece6a;
+    border-radius: 5px;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
