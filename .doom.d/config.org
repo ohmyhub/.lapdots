@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-05-07 Sat 18:05]
+#+modified: [2022-05-07 Sat 19:30]
 
 * Eliterate Config: A hot mess
 I am not an organized person. The system I use to organize my life is based
@@ -76,7 +76,7 @@ pretty, but it might be interesting.
  delete-by-moving-to-trash t                      ; Delete files to trash
  window-combination-resize t                      ; take new window space from all other windows (not just current)
  x-stretch-cursor t                               ; Stretch cursor to the glyph width
- uniquify-buffer-name-style 'forward)
+ uniquify-buffer-name-style 'forward)             ; This is my buffer. There are many like it but this one is mine
 #+end_src
 
 + Just mash those buttons to escape.
@@ -97,11 +97,12 @@ pretty, but it might be interesting.
 #+begin_src emacs-lisp :tangle yes
 ;; more better defaults
 (setq undo-limit 80000000                         ; Raise undo-limit to 80Mb
-      evil-want-fine-undo t                       ; By default while in insert all changes are one big blob. Be more granular
-      auto-save-default t                         ; Nobody likes to loose work, I certainly don't
+      evil-want-fine-undo t                       ; By default while in insert all changes are one big blob. Be more granulated
+      auto-save-default t                         ; Save me from myself
       truncate-string-ellipsis "…"               ; Unicode ellispis are nicer than "...", and also save /precious/ space
       scroll-margin 2                             ; It's nice to maintain a little margin
-      inhibit-compacting-font-caches t)
+      inhibit-compacting-font-caches t            ; You're not allowed to use the compactor
+      recentf-max-saved-items 50)                 ; Saving and exiting has been slow lately. Maybe this will help?
 #+end_src
 
 + What time is it?
