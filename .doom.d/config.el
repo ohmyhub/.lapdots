@@ -1,1 +1,0 @@
-/home/kevin/.doom.d/config.el
