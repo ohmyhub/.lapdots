@@ -1,9 +1,11 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-05-07 Sat 19:30]
+#+modified: [2022-05-07 Sat 19:48]
 
 * Eliterate Config: A hot mess
+#+html: <a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a>
+
 I am not an organized person. The system I use to organize my life is based
 around loosely categorized piles. However, I find literate programming
 fascinating and I decided try the literate configuration approach to Emacs.
