@@ -1,13 +1,9 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-05-07 Sat 19:53]
+#+modified: [2022-05-07 Sat 19:56]
 
-#+begin_src html :tangle no
-<div align="center">
-<a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a>
-</div>
-#+end_src
+#+html: <div align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></div>
 
 * Eliterate Config: A hot mess
 I am not an organized person. The system I use to organize my life is based
