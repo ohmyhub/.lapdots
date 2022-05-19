@@ -33,8 +33,8 @@ determine the exact padding."
   "A dark theme inspired by the 90's Taco Bell color palette."
 
   ;; name        default   256       16
-  ((bg         '("#172131" nil       nil            )) ;; modified
-   (bg-alt     '("#172131" nil       nil            ))
+  ((bg         '("#16252f" nil       nil            )) ;; modified
+   (bg-alt     '("#16252f" nil       nil            ))
    (base0      '("#070A0E" "black"   "black"        ))
    (base1      '("#0E131D" "#1e1e1e" "brightblack"  ))
    (base2      '("#151D2B" "#2e2e2e" "brightblack"  ))
@@ -104,7 +104,6 @@ determine the exact padding."
    (modeline-bg-inactive   (doom-darken bg 0.1))
    (modeline-bg-inactive-l `(,(car bg) ,@(cdr base1))))
 
-
   ;;;; Base theme face overrides
   (((font-lock-comment-face &override) :slant 'italic)
    ((font-lock-keyword-face &override) :slant 'italic)
@@ -163,7 +162,7 @@ determine the exact padding."
    (ivy-posframe-border :background highlight)
 
    ;;;; vertico-posframe
-   (vertico-posframe-border :background "#faea7e")
+   (vertico-posframe-border :background (doom-darken yellow 0.2))
 
    ;;;; magit
    (magit-diff-hunk-heading           :foreground bg                    :background (doom-blend highlight bg 0.3) :extend t)
@@ -184,6 +183,8 @@ determine the exact padding."
 
    ;;;; org <built-in>
    (org-hide :foreground hidden)
+   (org-level-1 :foreground (doom-darken orange 0.05) :weight 'bold :height 1.3)
+   (org-level-3 :foreground (doom-darken green 0.05) :weight 'bold :height 1.3)
 
    ;;;; solaire-mode
    (solaire-mode-line-face
@@ -194,7 +195,7 @@ determine the exact padding."
     :inherit 'mode-line-inactive
     :background modeline-bg-inactive-l
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive-l)))
-   (solaire-hl-line-face :background base3)
+   (solaire-hl-line-face :background (doom-lighten bg 0.5))
 
    ;;;; treemacs
    (treemacs-root-face :foreground highlight :weight 'ultra-bold :height 1.2)
