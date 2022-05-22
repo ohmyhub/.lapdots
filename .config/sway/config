@@ -272,6 +272,9 @@ bindsym $mod+Shift+P exec $passmenu
 # screenshots
 bindsym Shift+Alt+Print  exec grimshot --notify save area
 
+# color picker
+bindsym $mod+p exec wl-color-picker
+
 # urgency
 focus_on_window_activation focus
 
