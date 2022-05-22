@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-05-08 Sun 13:56]
+#+modified: [2022-05-20 Fri 09:31]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=300 height=300/></p>
 #+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></p>
@@ -839,4 +839,17 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
   "Sets the transparency of the frame window. 0=transparent/100=opaque"
   (interactive "nTransparency Value 0 - 100 opaque:")
   (set-frame-parameter (selected-frame) 'alpha value))
+#+end_src
+
+*** Of Mice and Centaurs
++ Some funky stuff happens when using ~dired~ and ~centaur-tabs~ and this is my
+  first attempt at a solution.
+#+begin_src emacs-lisp :tangle no
+;;(after! dired
+;;    (define-key centaur-tabs-default-map 'mouse-1 #'centaur-tabs-do-close)
+;;    (define-key centaur-tabs-default-map 'mouse-2 #'centaur-tabs-do-select))
+
+(with-eval-after-load 'dired
+  (define-key centaur-tabs-default-map [(mouse-1)] '#'centaur-tabs-do-close)
+  (define-key centaur-tabs-default-map [(mouse-2)] #'centaur-tabs-do-select))
 #+end_src
