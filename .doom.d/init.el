@@ -93,7 +93,7 @@
        :tools
        ;;ansible
        ;;biblio            ; Writes a PhD for you (citation needed)
-       ;;debugger          ; FIXME stepping through code, to help you add bugs
+       debugger            ; FIXME stepping through code, to help you add bugs
        ;;direnv
        ;;docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces
@@ -181,7 +181,9 @@
        (rust +lsp)         ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
        ;;(scheme +guile)   ; a fully conniving family of lisps
-       (sh +fish)          ; she sells {ba,z,fi}sh shells on the C xor
+       (sh                 ; she sells {ba,z,fi}sh shells on the C xor
+        +lsp
+        +fish)
        ;;sml
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
