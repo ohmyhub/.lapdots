@@ -27,7 +27,7 @@ case "$choice" in
     doom.d/init.el)
 		choice="$HOME/.doom.d/init.el"
 	;;
-	doon.d/packages.el)
+	doom.d/packages.el)
 		choice="$HOME/.doom.d/packages.el"
 	;;
 	sway)
@@ -49,4 +49,4 @@ case "$choice" in
 		exit 1
 	;;
 esac
-kitty emax "$choice"
+kitty emacsclient -n -s doom "$choice"
