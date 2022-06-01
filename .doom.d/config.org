@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-05-20 Fri 09:31]
+#+modified: [2022-05-30 Mon 11:05]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=300 height=300/></p>
 #+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></p>
@@ -315,11 +315,11 @@ an optional caption (leave it empty for no caption)."
 
 ** _Lookin' Good_
 *** Theme
-+ I'm using a WIP progress doom theme I've tentatively named taco-supreme. It
-  started off being inspired by the 1990s Taco Bell color palette.
++ I was using my WIP Taco Bell inspired theme but I'm putting that on hiatus
+  until I feel like messing with it again.
 #+begin_src emacs-lisp :tangle yes
-;; Live Mas
-(setq doom-theme 'doom-taco-supreme)
+;; Back to basics
+(setq doom-theme 'doom-snazzy)
 #+end_src
 
 *** Fonts
@@ -845,10 +845,7 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 + Some funky stuff happens when using ~dired~ and ~centaur-tabs~ and this is my
   first attempt at a solution.
 #+begin_src emacs-lisp :tangle no
-;;(after! dired
-;;    (define-key centaur-tabs-default-map 'mouse-1 #'centaur-tabs-do-close)
-;;    (define-key centaur-tabs-default-map 'mouse-2 #'centaur-tabs-do-select))
-
+;; This stays for now
 (with-eval-after-load 'dired
   (define-key centaur-tabs-default-map [(mouse-1)] '#'centaur-tabs-do-close)
   (define-key centaur-tabs-default-map [(mouse-2)] #'centaur-tabs-do-select))

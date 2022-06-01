@@ -62,6 +62,11 @@
 ;; imenu list
 (package! imenu-list)
 
+;; debugging fonts
+(package! font-lock-studio
+  :recipe (:host github
+           :repo "Lindydancer/font-lock-studio"))
+
 ;; don't allow native compilation
 (package! with-editor :recipe (:build (:not native-compile)))
 (package! vterm :recipe (:build (:not native-compile)))
