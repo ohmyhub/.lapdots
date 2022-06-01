@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Dmenu script for editing some of my more frequently edited config files.
+# rofi script for editing some of my more frequently edited config files.
 
 declare options=("kitty
-doom.d/config.el
+doom.d/config.org
 doom.d/init.el
 doom.d/packages.el
 sway
@@ -21,14 +21,14 @@ case "$choice" in
 	kitty)
 		choice="$HOME/.config/kitty/kitty.conf"
 	;;
-    doom.d/config.el)
-		choice="$HOME/.config/doom/config.el"
+    doom.d/config.org)
+		choice="$HOME/.doom.d/config.org"
 	;;
     doom.d/init.el)
-		choice="$HOME/.config/doom/init.el"
+		choice="$HOME/.doom.d/init.el"
 	;;
 	doon.d/packages.el)
-		choice="$HOME/.config/doom/packages.el"
+		choice="$HOME/.doom.d/packages.el"
 	;;
 	sway)
 		choice="$HOME/.config/sway/config"
