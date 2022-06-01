@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: package recipe
+# key: package
+# --
+(package! $1
+  :recipe (:host $2
+           :repo "$3/$4"))
+$0
