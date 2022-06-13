@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-yt-dlp -S "+res:1080,fps" -o "/home/kevin/Videos/youtube/%(title)s.%(ext)s" "$1" --restrict-filenames --merge-output-format mp4
+yt-dlp -S "+res:1080,fps" -o "/home/kevin/Videos/youtube/%(title)s.%(ext)s" "$1" --sponsorblock-remove sponsor --restrict-filenames --merge-output-format mp4
