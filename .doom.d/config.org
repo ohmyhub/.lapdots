@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-05-30 Mon 11:05]
+#+modified: [2022-06-15 Wed 10:05]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=300 height=300/></p>
 #+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></p>
@@ -173,9 +173,10 @@ pretty, but it might be interesting.
 (setq company-selection-wrap-around t)
 #+end_src
 
-+ Wrap your words and your willy.
++ Auto-fill-mode, roll out!
 #+begin_src emacs-lisp :tangle yes
-(+global-word-wrap-mode +1)
+(remove-hook 'text-mode-hook #'visual-line-mode)
+(add-hook 'text-mode-hook #'auto-fill-mode)
 #+end_src
 
 + Let's load my custom keybindings that I put in separate file for reasons I no
@@ -849,4 +850,20 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (with-eval-after-load 'dired
   (define-key centaur-tabs-default-map [(mouse-1)] '#'centaur-tabs-do-close)
   (define-key centaur-tabs-default-map [(mouse-2)] #'centaur-tabs-do-select))
+#+end_src
+
+*** K-I-S-S-I-N-G
++ I'm ignorant to the benefits of tree-sitter but I'm pretty sure it provides
+  enhanced syntax highlighting
+#+begin_src emacs-lisp :tangle yes
+;; in a tree
+(use-package! tree-sitter
+   :hook (prog-mode . turn-on-tree-sitter-mode)
+   :hook (tree-sitter-after-on . tree-sitter-hl-mode)
+   :config
+   (require 'tree-sitter-langs)
+   ;; This makes every node a link to a section of code
+   (setq tree-sitter-debug-jump-buttons t
+         ;; and this highlights the entire sub tree in your code
+         tree-sitter-debug-highlight-jump-region t))
 #+end_src
