@@ -13,4 +13,6 @@
        :desc "Insert today's date" :n                   "t"      #'today                        ; insert my flavor of date
        :desc "Copy region into kill ring" :n            "c"      #'copy-region-as-kill          ; quick copy without cutting
        :desc "Evaluate buffer and reload fonts" :n      "v"      #'evig                         ; eval buffer and reload fonts
-       :desc "Activate webjump" :n                      "w"      #'webjump))                    ; select url from list and open in web browser
+       :desc "Activate webjump" :n                      "w"      #'webjump                      ; select url from list and open in web browser
+       :desc "Scroll other window down" :n              "J"      (lambda () (interactive) (scroll-other-window 5))
+       :desc "Scroll other window up" :n                "K"      (lambda () (interactive) (scroll-other-window -5))))
