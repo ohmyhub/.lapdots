@@ -20,7 +20,6 @@ fsearch
 google-chrome-dev
 grimshot
 interception-ralt2hyper
-inxi
 mullvad-vpn-bin
 musikcube
 neovim-nightly-bin
