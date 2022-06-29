@@ -24,7 +24,7 @@ set $float_term kitty --config /home/kevin/.lapdots/.config/kitty/floating_kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/launcher.rasi
-set $alt_menu j4-dmenu-desktop --dmenu=tofi
+set $alt_menu j4-dmenu-desktop --dmenu=tofi | xargs swaymsg exec --
 
 # display
 set $screen_laptop 'eDP-1'
