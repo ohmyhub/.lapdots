@@ -26,9 +26,6 @@
 
 ;; not org packages
 ;;
-;; colorize color names in the buffer
-(package! rainbow-mode)
-
 ;; hot fresh themes
 (unpin! doom-themes)
 
@@ -38,9 +35,6 @@
 
 ;; hot fresh terminal
 (unpin! vterm)
-
-;; avoiding dired-git-info error because it annoys me
-(unpin! dired-git-info)
 
 ;; reading log files
 (package! logview)
@@ -61,15 +55,6 @@
 
 ;; imenu list
 (package! imenu-list)
-
-;; debugging fonts
-(package! font-lock-studio
-  :recipe (:host github
-           :repo "Lindydancer/font-lock-studio"))
-
-;; tree-sitter
-(package! tree-sitter)
-(package! tree-sitter-langs)
 
 ;; don't allow native compilation
 (package! with-editor :recipe (:build (:not native-compile)))

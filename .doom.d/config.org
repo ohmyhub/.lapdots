@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-06-15 Wed 10:05]
+#+modified: [2022-06-29 Wed 08:33]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=300 height=300/></p>
 #+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></p>
@@ -854,8 +854,9 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 
 *** K-I-S-S-I-N-G
 + I'm ignorant to the benefits of tree-sitter but I'm pretty sure it provides
-  enhanced syntax highlighting
-#+begin_src emacs-lisp :tangle yes
+  enhanced syntax highlighting. This has been merged into master so this config
+  shouldn't be necessary anymore. I'm leaving it here untangled for now.
+#+begin_src emacs-lisp :tangle no
 ;; in a tree
 (use-package! tree-sitter
    :hook (prog-mode . turn-on-tree-sitter-mode)
