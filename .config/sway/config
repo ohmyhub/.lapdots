@@ -24,6 +24,7 @@ set $float_term kitty --config /home/kevin/.lapdots/.config/kitty/floating_kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/launcher.rasi
+set $alt_menu j4-dmenu-desktop --dmenu=tofi
 
 # display
 set $screen_laptop 'eDP-1'
@@ -33,7 +34,7 @@ set $screen_acer 'HDMI-A-2'
 # wallpaper
 exec ~/.azotebg
 
-output $screen_laptop scale 1.0 max_render_time 6
+output $screen_laptop scale 1.25 max_render_time 6
 output $screen_acer scale 1.0 max_render_time 6
 
 # Style
@@ -83,8 +84,8 @@ input "1266:2099:CHICONY_USB_Keyboard" {
 }
 
 # rotation support
-exec swaymsg input "1386:20548:Wacom_Pen_and_multitouch_sensor_Finger" map_to_output $screen_laptop
 bindswitch tablet:on  output $screen_laptop transform 180
+exec swaymsg input "1386:20548:Wacom_Pen_and_multitouch_sensor_Finger" map_to_output $screen_laptop
 bindswitch tablet:off output $screen_laptop transform 0
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -248,6 +249,9 @@ bindsym $mod+o exec killall -SIGUSR1 waybar
 # fzf launcher
 bindsym $mod+y exec kitty --class 'launcher' bash -c 'compgen -c | sort -u | fzf --reverse --prompt='» ' --pointer='➤' | xargs -r swaymsg -t command exec'
 for_window [app_id="^launcher$"] floating enable, border pixel 1, resize set width 30 ppt height 40 ppt, move position 675 px 200 px
+
+# tofi launcher
+bindsym $mod+u exec $alt_menu
 
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
