@@ -29,13 +29,15 @@ set $alt_menu j4-dmenu-desktop --dmenu=tofi | xargs swaymsg exec --
 # display
 set $screen_laptop 'eDP-1'
 set $screen_acer 'HDMI-A-2'
+set $screen_asus 'HDMI-A-2'
 ### Output configuration
 #
 # wallpaper
 exec ~/.azotebg
 
-output $screen_laptop scale 1.25 max_render_time 6
-output $screen_acer scale 1.0 max_render_time 6
+output $screen_laptop scale 1.25 max_render_time 10
+output $screen_acer scale 1.0 max_render_time 10
+output $screen_asus scale 1.0 max_tender_time 10
 
 # Style
 font pango:JetBrainsMono Nerd Font 16px
