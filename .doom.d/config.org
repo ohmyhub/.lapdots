@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-06-29 Wed 08:33]
+#+modified: [2022-07-02 Sat 19:58]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=300 height=300/></p>
 #+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></p>
@@ -179,6 +179,14 @@ pretty, but it might be interesting.
 (add-hook 'text-mode-hook #'auto-fill-mode)
 #+end_src
 
++ It's always irked me that when I select a region the selection isn't deleted
+  when I paste new text. That's what I'm used to in most text based
+  environments. This should set that behavior.
+#+begin_src emacs-lisp :tangle yes
+;; delete the selection when pasting
+delete-selection-mode 1
+#+end_src
+
 + Let's load my custom keybindings that I put in separate file for reasons I no
   longer remember. Oh, and my ~abbrev~ definitions that automagically fix many
   common spelling mistakes.
@@ -313,6 +321,22 @@ an optional caption (leave it empty for no caption)."
     (kill-new url)
     (message (concat "Copied URL: " url))))
 #+end_src
+
++ I stumbled over someone's doom config that had some interesting bits and bobs
+  I wanted to try. This is a function that should make replacing selections of
+  text easier.
+  #+begin_src emacs-lisp :tangle yes
+;; quickly replace selected text
+(defun kev/evil-quick-replace (beg end )
+  (interactive "r")
+  (when (evil-visual-state-p)
+    (evil-exit-visual-state)
+    (let ((selection (replace-regexp-in-string "/" "\\/" (regexp-quote (buffer-substring-no-properties beg end)) t t)))
+      (setq command-string (format "1,$s /%s/%s/g" selection selection))
+      (minibuffer-with-setup-hook
+          (lambda () (backward-char 2))
+        (evil-ex command-string)))))
+  #+end_src
 
 ** _Lookin' Good_
 *** Theme
