@@ -18,6 +18,7 @@ if status is-interactive
     set -gx NO_AT_BRIDGE 1
     set -gx STATUSBAR waybar
     set -gx SWAY_CURSOR_SIZE 16
+    set -gx WLR_NO_HARDWARE_CURSORS 1
 
     # hush now
     set -gx fish_greeting ""

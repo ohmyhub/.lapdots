@@ -37,7 +37,7 @@ exec ~/.azotebg
 
 output $screen_laptop scale 1.25 max_render_time 10
 output $screen_acer scale 1.0 max_render_time 10
-output $screen_asus scale 1.0 max_tender_time 10
+output $screen_asus scale 1.0 max_render_time 10
 
 # Style
 font pango:JetBrainsMono Nerd Font 16px
