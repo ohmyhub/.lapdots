@@ -1,0 +1,1 @@
+/home/kevin/.vmacs.d/straight/repos/evil-collection/modes/image/evil-collection-image.el

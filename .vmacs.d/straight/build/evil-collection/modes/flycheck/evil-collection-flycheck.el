@@ -1,0 +1,1 @@
+/home/kevin/.vmacs.d/straight/repos/evil-collection/modes/flycheck/evil-collection-flycheck.el

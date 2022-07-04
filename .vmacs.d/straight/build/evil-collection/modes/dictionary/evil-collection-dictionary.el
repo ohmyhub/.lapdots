@@ -1,0 +1,1 @@
+/home/kevin/.vmacs.d/straight/repos/evil-collection/modes/dictionary/evil-collection-dictionary.el
