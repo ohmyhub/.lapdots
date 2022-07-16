@@ -1,7 +1,7 @@
 ignore-empty-password
 disable-caps-lock-text
-image=/home/kevin/Pictures/walls/red-star-skyscape.png
-font=monospace
+image=/home/kevin/Dropbox/Images/wallpapers/BisBiswas-landscape-digital-art-rocket.jpg
+font=Cousine Regular Nerd Font Complete Mono
 
 text-ver-color=00000000
 text-wrong-color=00000000
@@ -24,13 +24,13 @@ caps-lock-bs-hl-color=00000000
 caps-lock-key-hl-color=00000000
 separator-color=00000000
 
-scaling=fill
+scaling=fit
 indicator
 clock
-timestr=%I:%M %p
-datestr=%A, %d %B
+timestr=%l:%M %p
+datestr=%A | %B %d | %Y
 indicator-x-position=250
-indicator-y-position=975
+indicator-y-position=750
 indicator-radius=200
-font-size=100
+font-size=125
 text-color=c0caf5
