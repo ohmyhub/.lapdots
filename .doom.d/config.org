@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-07-02 Sat 19:58]
+#+modified: [2022-07-16 Sat 09:39]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=300 height=300/></p>
 #+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></p>
@@ -184,7 +184,7 @@ pretty, but it might be interesting.
   environments. This should set that behavior.
 #+begin_src emacs-lisp :tangle yes
 ;; delete the selection when pasting
-delete-selection-mode 1
+(delete-selection-mode 1)
 #+end_src
 
 + Let's load my custom keybindings that I put in separate file for reasons I no
@@ -305,6 +305,17 @@ an optional caption (leave it empty for no caption)."
   (add-hook 'org-mode-hook
         (lambda ()
           (add-hook 'after-save-hook #'org-babel-tangle-config)))
+
+;;tangle sway config on save
+(defun org-babel-tangle-sway ()
+  (when (string-equal (buffer-file-name)
+                      (expand-file-name "~/.lapdots/.config/sway/sway-config.org"))
+    (let ((org-config-babel-evaluate nil))
+      (org-babel-tangle))))
+
+  (add-hook 'org-mode-hook
+        (lambda ()
+          (add-hook 'after-save-hook #'org-babel-tangle-sway)))
 #+end_src
 
 + A little helper function that let's you extract the url from an org-mode link
@@ -353,8 +364,8 @@ an optional caption (leave it empty for no caption)."
   of Iosevka recently so that's what I'm using at the moment.
 #+begin_src emacs-lisp :tangle yes
 ;; choose your fonts!
-(setq doom-font (font-spec :family "Bespoke Iosevka Mono" :size 24 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "Overpass Nerd Font" :size 22 :weight 'medium)
+(setq doom-font (font-spec :family "Bespoke Iosevka Mono" :size 20 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "Overpass Nerd Font" :size 20 :weight 'medium)
       doom-unicode-font (font-spec :family "Noto Color Emoji")
       doom-serif-font (font-spec :family "BlexMono Nerd Font" :weight 'light))
 (after! doom-themes
