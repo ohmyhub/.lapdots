@@ -1,3 +1,11 @@
+#+title: Sway Config
+#+PROPERTY: header-args :padline no :tangle ~/.lapdots/.config/sway/config
+#+TOC: headlines
+
+* Sway WM Default Configuration
+
+** Essential variables
+#+begin_src conf
 # My sway config
 ### Variables ###
 # Logo key
@@ -28,6 +36,10 @@ set $alt_menu j4-dmenu-desktop --dmenu=tofi | xargs swaymsg exec --
 # fzf launcher
 bindsym $mod+y exec kitty --class 'launcher' bash -c 'compgen -c | sort -u | fzf --reverse --prompt='» ' --pointer='➤' | xargs -r swaymsg -t command exec'
 for_window [app_id="^launcher$"] floating enable, border pixel 1, resize set width 30 ppt height 40 ppt, move position 675 px 200 px
+#+end_src
+
+** Display configuration
+#+begin_src conf
 ## Display ##
 set $screen_laptop 'eDP-1'
 set $screen_acer 'HDMI-A-2'
@@ -41,6 +53,10 @@ exec ~/.azotebg
 output $screen_laptop scale 1.25 max_render_time 10
 output $screen_acer scale 1.0 max_render_time 10
 output $screen_asus scale 1.0 max_render_time 10
+#+end_src
+
+** Style and some basic colorscheme
+#+begin_src conf
 ### Style ###
 font pango:JetBrainsMono Nerd Font 16px
 smart_borders on
@@ -55,11 +71,19 @@ client.focused          #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
 client.focused_inactive #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
 client.unfocused        #414868 #24283b #a9b1d6 #7dcfff   #414868
 client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
+#+end_src
+
+** Idle configuration
+#+begin_src conf
 ### Idle Configuration ###
  exec swayidle -w \
           timeout 1200 'swaylock -f' \
           timeout 1200 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f'
+#+end_src
+
+** Input configuration
+#+begin_src conf
 ### Input Configuration ###
 input "2:14:ETPS/2_Elantech_Touchpad" {
     drag enabled
@@ -89,6 +113,10 @@ input "1266:2099:CHICONY_USB_Keyboard" {
 bindswitch tablet:on  output $screen_laptop transform 180
 exec swaymsg input "1386:20548:Wacom_Pen_and_multitouch_sensor_Finger" map_to_output $screen_laptop
 bindswitch tablet:off output $screen_laptop transform 0
+#+end_src
+
+** Basic default keybindings
+#+begin_src conf
 ### Key bindings ###
 ## Basics: ##
     # Start a terminal
@@ -124,6 +152,10 @@ bindswitch tablet:off output $screen_laptop transform 0
     # Monitor brightness
     bindsym XF86MonBrightnessDown exec brightnessctl set 5-%
     bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+#+end_src
+
+** Keybindings for moving around
+#+begin_src conf
 ## Moving around: ##
     # Move your focus around
     bindsym $mod+$left focus left
@@ -173,6 +205,10 @@ bindswitch tablet:off output $screen_laptop transform 0
 
     # Workspace setting
     focus_on_window_activation focus
+#+end_src
+
+** Keybindings related to workspace and window layouts
+#+begin_src conf
 ## Layout stuff: ##
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
@@ -230,6 +266,10 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+#+end_src
+
+** My personal non-default keybindings
+#+begin_src conf
 # Non-default keybindings ##
 # Toggle waybar
 bindsym $mod+o exec killall -SIGUSR1 waybar
@@ -261,10 +301,19 @@ bindsym Shift+Alt+Print  exec grimshot --notify save area
 
 # color picker
 bindsym $mod+p exec wl-color-picker
+#+end_src
+
+** Waybar
+#+begin_src conf
 ### Status Bar: ###
 # Waybar
 bar {
     swaybar_command waybar
 }
+#+end_src
+
+** Include other config files
+#+begin_src conf
 include /etc/sway/config.d/*
 include $HOME/.config/sway/config.d/*.conf
+#+end_src
