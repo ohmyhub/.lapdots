@@ -1,8 +1,9 @@
 if status is-interactive
 
     # swayland
-    set -gx QT_QPA_PLATFORM wayland-egl
+    set -gx QT_QPA_PLATFORM wayland
     set -gx QT_WAYLAND_DISABLE_WINDOWDECORATION 1
+    set -gx QT_QPA_PLATFORMTHEME gtk3
     set -gx MOZ_ENABLE_WAYLAND 1
     set -gx MOZ_DBUS_REMOTE 1
     set -gx MOZ_WEBRENDER 1
