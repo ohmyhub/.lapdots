@@ -1,5 +1,5 @@
 font = "/usr/share/fonts/nerd-fonts-complete/TTF/JetBrains Mono Regular Nerd Font Complete.ttf"
-font-size = 20
+font-size = 16
 background-color = #1a1b26
 border-color = #9f79ee
 corner-radius = 25
