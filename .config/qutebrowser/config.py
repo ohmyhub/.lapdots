@@ -144,7 +144,7 @@ c.statusbar.padding = {"bottom": 5, "left": 5, "right": 5, "top": 5}
 
 # Default zoom level.
 # Type: Perc
-c.zoom.default = "100%"
+c.zoom.default = "90"
 
 # Render all web contents using a dark theme.
 # Type: Bool
@@ -161,10 +161,10 @@ c.fonts.default_family = ["DejaVu Sans"]
 # either a float value with a "pt" suffix, or an integer value with a
 # "px" suffix.
 # Type: String
-c.fonts.default_size = "16pt"
+c.fonts.default_size = "14pt"
 
 # My eyes aint so good
-c.fonts.web.size.minimum = 16
+c.fonts.web.size.minimum = 14
 
 # I want hints to be uppercase characters
 c.hints.uppercase = True
