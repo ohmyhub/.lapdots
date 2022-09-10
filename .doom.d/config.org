@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-07-16 Sat 09:39]
+#+modified: [2022-09-10 Sat 08:27]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=300 height=300/></p>
 #+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></p>
@@ -404,10 +404,13 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 (setq fancy-splash-image "~/Pictures/unbridled-unicorn.png")
 #+end_src
 
-+ I wanted a more minimal dashboard so I removed the text menu
++ I wanted a more minimal dashboard so I removed the text menu and buttons.
 #+begin_src emacs-lisp :tangle yes
 ;; simplify the startup screen
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-footer)
+(add-hook! '+doom-dashboard-mode-hook (hl-line-mode -1) (hide-mode-line-mode 1))
+(setq-hook! '+doom-dashboard-mode-hook evil-normal-state-cursor (list nil))
 #+end_src
 
 *** Modeline
@@ -431,6 +434,16 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
     '(objed-state misc-info persp-name battery grip irc mu4e gnus github debug repl lsp minor-modes input-method indent-info buffer-encoding major-mode process vcs checker "  ")))
 
 (setq doom-modeline-height 40)
+#+end_src
+
++ Let's add the battery status to our modeline.
+#+begin_src elisp :tangle yes
+(after! doom-modeline
+  (let ((battery-str (battery)))
+    (unless (or (equal "Battery status not available" battery-str)
+                (string-match-p (regexp-quote "unknown") battery-str)
+                (string-match-p (regexp-quote "N/A") battery-str))
+      (display-battery-mode 1))))
 #+end_src
 
 + A custom modeline for pdf files stolen from @jeet who stole it from @teco.
