@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-09-10 Sat 08:27]
+#+modified: [2022-09-10 Sat 08:30]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=300 height=300/></p>
 #+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></p>
@@ -528,7 +528,7 @@ Also immediately enables `mixed-pitch-modes' if currently in one of the modes."
 + I like tab buffers but I wanted to add my own little design flair to the tab
   icons. This changes the icons used for closing a tab and for showing when a
   buffer has unsaved changes.
-#+begin_src emacs-lisp :tangle yes
+#+begin_src emacs-lisp :tangle no
 ;; tweak those tabs
 (setq centaur-tabs-close-button ""
       centaur-tabs-modified-marker ""
