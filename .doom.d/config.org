@@ -1,7 +1,7 @@
 #+title: Eliterate Config
 #+author: Kevin Ward
 #+email: mail@kevinward.xyz
-#+modified: [2022-09-10 Sat 08:30]
+#+modified: [2022-09-10 Sat 08:46]
 #+options: title:nil H:4 toc:nil
 #+html: <p align="center"><img src="misc/unbridled-unicorn.png" width=300 height=300/></p>
 #+html: <p align="center"><a href="https://orgmode.org"><img src="https://img.shields.io/badge/Org-literate%20config-%2377aa99?style=flat-square&logo=org&logoColor=white"></a></p>
@@ -49,6 +49,9 @@ pretty, but it might be interesting.
 #+begin_src emacs-lisp :tangle yes
 ;; where the org at?
 (setq org-directory "~/Dropbox/Org/")
+
+;; where the doom at?
+(setq doom-user-dir "/home/kevin/.lapdots/.doom.d/")
 #+end_src
 
 + This might as well go here. At the moment I only use roam for daily
